@@ -1,0 +1,89 @@
+// style for clip slider _clipcircle.scss
+.clip-circles {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background-color: wheat;
+    margin-bottom: 2em;
+    overflow: hidden;
+
+    h3 {
+        font-size: 2em;
+        text-align: left;
+        // margin: 50px 0;
+
+        color: wheat;
+        text-transform: capitalize;
+        background-color: salmon;
+        padding: 20px 150px 20px 20px;
+        clip-path: polygon(0% 0%, 80% 0%, 60% 100%, 0% 100%);
+    }
+
+    .circle-frame {
+        position: absolute;
+        width: calc(100% - 4em);
+        height: 70vh;
+        top: 0;
+        left: 2em;
+
+        .circle {
+            position: absolute;
+            width: 100%;
+            height: 90vh;
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: 2s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 7em;
+        }
+    }
+}
+
+.circle.circle1 {
+    background: url('/img/img1.jpg');
+    clip-path: circle(10vw at 25% center);
+}
+
+.circle.circle2 {
+    background: url('/img/img2.jpg');
+    clip-path: circle(10vw at 50% center);
+}
+
+.circle.circle3 {
+    background: url('/img/img3.jpg');
+    clip-path: circle(10vw at 75% center);
+}
+
+.circle-frame .circle:hover {
+    z-index: 1;
+}
+
+.circle-frame .circle:active {
+    clip-path: circle(90% at center);
+}
+
+@media screen and (max-width: 800px) {
+    .clip-circles h3 {
+        font-size: 1.5em;
+    }
+
+    .circle {
+        flex-direction: column;
+
+        &.circle1 {
+            clip-path: circle(10% at 50% 25%);
+        }
+
+        &.circle2 {
+            clip-path: circle(10% at 50% center);
+        }
+
+        &.circle3 {
+            clip-path: circle(10% at 50% 75%);
+        }
+    }
+}

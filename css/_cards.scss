@@ -1,0 +1,469 @@
+// style for cards
+.cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+    background-color: white;
+    overflow-x: hidden;
+
+    &>p {
+        font-size: 2em;
+        margin: 0.5em;
+        font-weight: 700;
+        color: grey;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: all 0.6s ease;
+
+        &.observeMe {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+}
+
+.cardframe {
+    width: calc(100% - 10%);
+    margin: 1em 5%;
+    display: flex;
+    justify-content: space-evenly;
+    // height: auto;
+
+    .cardbasic {
+        width: 200px;
+        height: 500px;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: all 0.6s ease;
+
+    }
+
+    .cardbasic:nth-child(1) {
+        background-image: linear-gradient(to bottom, transparent, rgb(255, 123, 0));
+
+        &:hover {
+            box-shadow: 3px 3px 5px 3px orangered;
+            transform: scale(1.05);
+        }
+    }
+
+    .cardbasic:nth-child(2) {
+        background-image: linear-gradient(to bottom, transparent, rgb(0, 102, 255));
+
+        &:hover {
+            box-shadow: 3px 3px 5px 3px rgb(0, 119, 255);
+            transform: scale(1.05);
+        }
+    }
+
+    .cardbasic:nth-child(3) {
+        background-image: linear-gradient(to bottom, transparent, rgb(190, 180, 31));
+
+        &:hover {
+            box-shadow: 3px 3px 5px 3px rgb(180, 170, 19);
+            transform: scale(1.05);
+        }
+    }
+}
+
+.cardbasic {
+    border-radius: 5px;
+    box-shadow: 5px 3px 5px rgba(0, 0, 0, 0.5);
+
+    h3 {
+        margin: 10px auto;
+        margin-left: 1em;
+        color: white;
+    }
+
+    p {
+        margin: 1px 10px;
+        color: white;
+    }
+}
+
+//-----------------------------------
+// card-box with card-info
+.card-box {
+    background-color: wheat;
+    width: 80%;
+    min-height: 550px;
+    position: relative;
+    margin: 1em;
+    box-shadow: 3px 3px 5px 5px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    opacity: 0;
+    transform: translateX(100px);
+    transition: all 1s ease;
+
+    &.observeMe {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    &>div {
+        width: 50%;
+        height: 100%;
+        position: absolute;
+    }
+
+    .card-box-left {
+        top: 0;
+        left: 0;
+
+        h2 {
+            font-size: 2rem;
+            margin: 1.5rem;
+            margin-top: 5rem;
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 40%;
+                height: 4px;
+                background-color: black;
+                top: -10px
+            }
+        }
+
+        li {
+            font-size: 1.3rem;
+            margin: 1.5rem;
+        }
+    }
+
+    .card-box-right {
+        top: 0;
+        right: 0;
+
+        span {
+            width: 50%;
+            height: auto;
+            position: absolute;
+            background-color: white;
+            box-shadow: 3px 3px 3px 3px grey;
+            bottom: 1em;
+            right: 1em;
+            transition: 0.6s;
+
+            &:hover {
+                transform: scale(1.2) translateY(-3em) translateX(-3em);
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                z-index: 1;
+            }
+        }
+    }
+}
+
+.card-box1::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: salmon;
+    clip-path: polygon(0% 0%, 60% 0%, 40% 100%, 0% 100%);
+}
+
+.card-box2 {
+    overflow: hidden;
+
+    div:first-child {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        z-index: 1;
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            top: -16rem;
+            left: -3rem;
+            z-index: -1;
+            background-color: salmon;
+            box-shadow: 0 0 0 50px rgb(252, 141, 129),
+                0 0 0 150px rgb(253, 162, 151),
+                0 0 0 200px rgb(247, 188, 181);
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 20rem;
+            height: 20rem;
+            border-radius: 50%;
+            z-index: -1;
+            bottom: -22rem;
+            right: -4rem;
+            background-color: salmon;
+            box-shadow: 0 0 0 50px rgb(252, 141, 129),
+                0 0 0 150px rgb(253, 162, 151),
+                0 0 0 200px rgb(247, 188, 181);
+        }
+    }
+}
+
+.card-box2 div {
+    h2 {
+        font-size: 2rem;
+        margin: 1.5rem;
+        margin-top: 5em;
+    }
+
+    li {
+        font-size: 1.3rem;
+        margin: 1.5rem;
+    }
+
+}
+
+.css-draw {
+    position: absolute;
+    width: 50%;
+    height: 150%;
+    top: -25%;
+    right: 0;
+
+    // style for burger
+    b {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-image: linear-gradient(#E38F66 50%, #eebc4f 50%);
+        top: -2rem;
+        left: 30px;
+        transition: 0.6s;
+
+        &:hover {
+            transform: rotate(360deg) scale(1.4);
+        }
+
+        &:hover::before {
+            box-shadow: 0 0 0 4px wheat;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 120px;
+            height: 20px;
+            background-color: brown;
+            border-radius: 10px;
+            top: 40px;
+            left: -10px;
+        }
+    }
+
+    // style for X
+    i {
+        position: absolute;
+        width: 100px;
+        height: 20px;
+        background-color: #000;
+        top: 60%;
+        right: 3rem;
+        transform: rotate(45deg);
+        transition: 0.6s;
+
+        &:hover {
+            transform: rotate(-315deg) scale(1.4);
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #000;
+            transform: rotate(90deg);
+        }
+    }
+
+}
+
+// clipbutton
+.clipbtn {
+    width: 20rem;
+    height: 6rem;
+    position: relative;
+    bottom: -6rem;
+    left: 5rem;
+
+    a {
+        position: relative;
+        display: inline-block;
+        text-decoration: none;
+        width: 100%;
+        height: 100%;
+        box-shadow: 3px 3px 3px 3px grey;
+        background-color: wheat;
+
+        span {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            font-size: 2em;
+            text-transform: uppercase;
+            font-weight: 600;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: wheat;
+            transition: 0.6s;
+        }
+    }
+}
+
+.clipbtn a span:nth-child(1) {
+    color: salmon;
+    background-color: wheat;
+}
+
+.clipbtn a span:nth-child(2) {
+    color: wheat;
+    background-color: salmon;
+    clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%, 40% 50%);
+}
+
+.clipbtn a span:nth-child(1):hover~span:nth-child(2) {
+    clip-path: polygon(100% 0, 100% 0%, 100% 100%, 100% 100%, 100% 50%);
+}
+
+.clipbtn a span:nth-child(2):hover {
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%, 0% 50%);
+}
+
+// javascript card
+.card-box3 {
+    background-image: linear-gradient(salmon, wheat);
+    overflow: hidden;
+    // position: relative;
+    padding: 3rem;
+
+    &>div {
+        border: 1px solid rgba(255, 255, 255, 0.6);
+        border-radius: 10px;
+        width: 100%;
+        height: 28rem;
+        position: relative;
+        // top: 3rem;
+        // left: 10%;
+        z-index: 10;
+        background-image: linear-gradient(to right bottom,
+                rgba(255, 255, 255, 0.6),
+                rgba(255, 255, 255, 0.2));
+
+        h2 {
+            text-align: center;
+            margin: 4em 1em 1em 1em;
+            font-size: 2em;
+        }
+
+        li {
+            font-size: 1.3em;
+            margin: 1em;
+        }
+
+        .typing {
+            position: absolute;
+            width: 30%;
+            height: 22vh;
+            bottom: 0;
+            right: 0;
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            border-radius: 10px;
+            border-bottom: transparent;
+            border-right: transparent;
+            background-image: linear-gradient(to right bottom,
+                    rgba(255, 255, 255, 0.6),
+                    rgba(255, 255, 255, 0.2));
+
+            p {
+                font-size: 1.2em;
+                margin: 1em;
+            }
+        }
+    }
+
+    b {
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+
+        background-image: linear-gradient(rgba(255, 255, 255, 0.3),
+                rgba(255, 255, 255, 0.3));
+        top: 1em;
+        right: 2em;
+        z-index: 2;
+    }
+
+    b::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-image: linear-gradient(rgba(250, 128, 114, 0.7),
+                rgba(250, 128, 114, 0.3));
+        border-radius: 50%;
+        top: 20em;
+        right: 53vw;
+        z-index: 2;
+
+    }
+
+}
+
+
+@media screen and (max-width:800px) {
+    .card-box3 {
+        div {
+
+            h2 {
+                margin: 0.5em 1em 1em 1em;
+            }
+
+            .typing {
+                width: fit-content;
+                height: 10rem;
+
+                p {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+
+    }
+
+    .cards>p {
+        font-size: 1.3em;
+    }
+
+    .cardframe {
+        justify-content: space-between;
+        gap: 5px;
+    }
+
+    .clipbtn {
+        bottom: -4rem;
+        left: 2rem;
+        width: 15rem;
+    }
+
+}

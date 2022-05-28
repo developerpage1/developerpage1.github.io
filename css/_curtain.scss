@@ -1,0 +1,91 @@
+// style for curtain
+$curtain-color1: wheat;
+$curtain-color2: salmon;
+$min-height: 98vh;
+
+.sparkles {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.curtain {
+    // split the background
+    width: 100%;
+    background-image: linear-gradient(to bottom,
+            $curtain-color2 50%,
+            $curtain-color1 50%);
+
+}
+
+.curtain::after {
+    content: '';
+    display: block;
+    min-height: $min-height;
+}
+
+.curtain2 {
+    position: sticky;
+    top: 20px;
+
+    // blend the content
+    mix-blend-mode: difference;
+
+    // center the content
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    // set the min height
+    min-height: $min-height;
+
+    h2 {
+        color: $curtain-color1;
+        font-size: 2em;
+        text-transform: uppercase;
+    }
+}
+
+// animated sparkles
+.sparkles {
+    position: relative;
+}
+
+.sparkles i {
+    position: absolute;
+    // width: 100%;
+    // height: 100%;
+    background-color: rgba(255, 255, 255, 0.1);
+    top: 0px;
+    border-radius: 50%;
+    animation: animeSparkle 10s linear infinite;
+}
+
+@keyframes animeSparkle {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    40% {
+        transform: translateY(20vh);
+        background-color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(50vh);
+        background-color: rgba(255, 255, 255, 1);
+        opacity: 1;
+    }
+
+    60% {
+        transform: translateY(60vh);
+        background-color: rgba(255, 255, 255, 0.5);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(150vh);
+        opacity: 0;
+    }
+}

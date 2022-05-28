@@ -1,0 +1,72 @@
+// style for slideshow
+.slideshow-container {
+    // max-width: calc(100vw - 10vw);
+    width: calc(100vw - 10vw);
+    height: 90vh;
+    position: relative;
+    margin-top: 40px;
+    left: 5vw;
+    overflow: hidden;
+
+    a {
+        position: absolute;
+        font-size: 4em;
+        color: salmon;
+        font-weight: 800;
+        cursor: pointer;
+        z-index: 3;
+        opacity: 0.3;
+        transition: opacity 0.2s;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+
+
+    .prev {
+        top: 50%;
+        left: 1em;
+    }
+
+    .next {
+        top: 50%;
+        right: 1em;
+    }
+
+}
+
+.myslide {
+    position: relative;
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+    overflow: hidden;
+
+    h2 {
+        position: absolute;
+        left: 50%;
+        top: 3rem;
+        // font-size: 1.5em;
+        z-index: 3;
+        color: salmon;
+        font-weight: 900;
+
+    }
+
+    img {
+        height: 100%;
+        width: auto;
+        background-size: contain;
+
+    }
+
+
+}
+
+.myslide.active {
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

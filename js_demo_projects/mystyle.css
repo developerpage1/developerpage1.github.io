@@ -1,0 +1,353 @@
+:root {
+  --bg-color: red;
+  --bg-colorTodo: #3976cc;
+  --bg-colorTodoEven: #95bdf5;
+  --bg-colorTodoHover: #1f7cfd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.frame {
+  height: 100vh;
+  -ms-scroll-snap-type: y mandatory;
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+}
+section {
+  height: 100vh;
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  font-size: 2.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+/* -------------------------------------------------------- */
+/* style for page 1 */
+/* ---------------------------------------------------------- */
+.one {
+  background-color: aqua;
+}
+
+/* --------------------------------------------------------- */
+/* page 2 - stopwatch*/
+/* --------------------------------------------------------- */
+.two {
+  background-color: tomato;
+}
+.two p {
+  font-size: 2rem;
+  margin: 10px;
+}
+.two button {
+  font-size: 2rem;
+  padding: 10px 15px;
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.6s ease-in-out;
+}
+.two button:hover {
+  background-color: rgb(255, 254, 254);
+  color: tomato;
+}
+
+/* --------------------------------------------------------- */
+/* page 3 - clock */
+/* ---------------------------------------------------------- */
+.three {
+  background-color: greenyellow;
+}
+.three p {
+  font-size: 2rem;
+  padding: 2rem 3rem;
+  background-color: black;
+  color: greenyellow;
+  border-radius: 10px;
+}
+
+/* --------------------------------------------------------- */
+/* page 4 - calculator */
+/* ---------------------------------------------------------- */
+.four {
+  background-color: darkcyan;
+}
+.four h1 {
+  margin: 2rem;
+}
+.four table {
+  border: 1px solid black;
+  border-radius: 10px;
+  width: 300px;
+  height: 350px;
+}
+
+#txtcalculator {
+  width: calc(100% - 20px);
+  height: 100%;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
+  text-align: end;
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  overflow: auto;
+}
+.four :is(tr, td) {
+  border: 1px solid black;
+}
+.four button {
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  cursor: pointer;
+}
+#btnequal {
+  padding: 5rem 0;
+}
+
+/* ------------------------------------------ */
+/* page 5 - random gradient color generator */
+/* ------------------------------------------ */
+.five {
+  background-color: violet;
+}
+.five button {
+  font-size: 2em;
+  padding: 1rem 2rem;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  background-color: transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: color 0.4s ease-in-out;
+  text-transform: capitalize;
+}
+.five button:hover {
+  color: white;
+}
+.five p {
+  font-size: 2rem;
+  margin: 2rem;
+}
+
+/* -------------------------------------------- */
+/* page 6 - todo list */
+/* ---------------------------------------------*/
+.six {
+  background-color: #a6c6f3;
+  overflow-y: scroll;
+  position: relative;
+}
+.tasks {
+  background-color: var(--bg-colorTodo);
+  position: absolute;
+  left: 0;
+  top: 0;
+  margin: 1rem 2rem 0 2rem;
+  width: calc(100% - 4rem);
+  height: 7rem;
+}
+.tasks h2 {
+  text-align: center;
+  padding: 10px;
+}
+.tasks input {
+  font-size: 1.5rem;
+  width: calc(80% - 4rem);
+  float: left;
+  margin-left: 4rem;
+}
+.tasks button {
+  font-size: 1rem;
+  margin-right: 4rem;
+  width: calc(20% - 4rem);
+  padding: 0.3rem 0;
+  float: right;
+}
+.tasks::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ul {
+  position: absolute;
+  left: 2rem;
+  top: 8rem;
+  width: calc(100% - 4rem);
+  /* margin-left: 2rem; */
+  list-style: none;
+}
+ul li {
+  width: 100%;
+  padding: 1rem;
+  padding-left: 4rem;
+  background-color: #eee;
+  position: relative;
+}
+
+ul li:nth-child(even) {
+  background-color: var(--bg-colorTodoEven);
+}
+ul li:hover {
+  background-color: var(--bg-colorTodoHover);
+}
+ul li.checked {
+  text-decoration: line-through;
+  background-color: var(--bg-colorTodoHover);
+  color: white;
+  position: relative;
+}
+ul li.checked::before {
+  content: "";
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  width: 16px;
+  height: 10px;
+  border-left: 5px solid white;
+  border-bottom: 5px solid white;
+  border-radius: 5px;
+  transform: rotate(-45deg);
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.4rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.close:hover {
+  background-color: var(--bg-colorTodo);
+}
+
+/* -------------------------------------------- */
+/* page 7 - analog clock
+/* ---------------------------------------------*/
+.seven {
+  background: linear-gradient(272deg, #de5c9d, #546bea);
+}
+
+.clock-frame {
+  --Oclock: 50vh;
+  width: var(--Oclock);
+  height: var(--Oclock);
+  position: relative;
+  border: 1px solid black;
+  border-radius: 50%;
+}
+.clock-frame::before {
+  --frame: 20px;
+  position: absolute;
+  content: "";
+  width: var(--frame);
+  height: var(--frame);
+  border-radius: 50%;
+  background-color: black;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.clock-frame span {
+  position: absolute;
+  font-size: 1.5rem;
+}
+.clock-frame span:nth-child(1) {
+  left: 70%;
+  top: 7%;
+}
+.clock-frame span:nth-child(2) {
+  left: 87%;
+  top: 23%;
+}
+.clock-frame span:nth-child(3) {
+  left: 93%;
+  top: 45%;
+}
+.clock-frame span:nth-child(4) {
+  left: 87%;
+  top: 68%;
+}
+.clock-frame span:nth-child(5) {
+  left: 70%;
+  top: 85%;
+}
+.clock-frame span:nth-child(6) {
+  left: 48%;
+  top: 91%;
+}
+.clock-frame span:nth-child(7) {
+  left: 25%;
+  top: 85%;
+}
+.clock-frame span:nth-child(8) {
+  left: 8%;
+  top: 68%;
+}
+.clock-frame span:nth-child(9) {
+  left: 2%;
+  top: 45%;
+}
+.clock-frame span:nth-child(10) {
+  left: 8%;
+  top: 24%;
+}
+.clock-frame span:nth-child(11) {
+  left: 25%;
+  top: 8%;
+}
+.clock-frame span:nth-child(12) {
+  left: 45%;
+  top: 2%;
+}
+
+.clock-h {
+  position: absolute;
+  width: 10px;
+  height: 30vh;
+  background-image: linear-gradient(black 50%, transparent 50%);
+  left: 48.6%;
+  top: 20%;
+  border-radius: 10px;
+}
+.clock-min {
+  position: absolute;
+  width: 7px;
+  height: 40vh;
+  background-image: linear-gradient(black 50%, transparent 50%);
+  left: 49%;
+  top: 10%;
+  border-radius: 7px;
+}
+.clock-sec {
+  position: absolute;
+  width: 5px;
+  height: 43vh;
+  background-image: linear-gradient(red 50%, transparent 50%);
+  left: 49.5%;
+  top: 7%;
+  border-radius: 5px;
+}
+
+/* -------------------------------------------- */
+/* page 8 - bouncing balls
+/* ---------------------------------------------*/
+
+/* -------------------------------------------- */
+/* page 9 - under construction
+/* ---------------------------------------------*/

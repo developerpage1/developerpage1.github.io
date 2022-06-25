@@ -5,32 +5,6 @@ function burgerToX(arr) {
     navbarmenu.classList.toggle('show');
 }
 
-// ---------------------------------------------
-// a little sparkles to the curtain
-function curtainStage() {
-    const stage = document.getElementsByClassName('sparkles')[0];
-
-    let count = 200;
-    let j = 0;
-    while (j < count) {
-        let sparkle = document.createElement('i');
-        let size = Math.random() * 5;
-        let x = Math.floor(Math.random() * window.innerWidth);
-        let duration = Math.random() * 2;
-
-        sparkle.style.left = x + 'px';
-        // sparkle.style.top = x + 'px';
-        sparkle.style.width = size + 'px';
-        sparkle.style.height = size + 'px';
-        sparkle.style.animationDelay = duration + 's';
-        sparkle.style.animationDuration = 1 + (duration * 5) + 's';
-
-        stage.appendChild(sparkle);
-        j++;
-    }
-    
-}
-curtainStage();
 
 // ---------------------------------------------------
 // slideshow code

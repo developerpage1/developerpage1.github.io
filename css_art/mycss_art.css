@@ -1,0 +1,2941 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-image: linear-gradient(104deg, #4feb5d, #a25fea);
+}
+h1 {
+  font-size: 3rem;
+  text-align: center;
+  margin: 5rem;
+}
+.galery {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.art {
+  width: 400px;
+  height: 300px;
+  margin: 1rem;
+  border: 1px solid white;
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+/* ------------------------------ */
+/* art 1 */
+/* ------------------------------ */
+.art1 {
+  background-color: #6592cf;
+}
+.art1 > div {
+  position: relative;
+  top: 75px;
+  left: 50px;
+  width: 300px;
+  height: 150px;
+  background: #243d83;
+}
+.art1 .circle-3 {
+  background: #eeb850;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  top: 50px;
+  left: 125px;
+  box-shadow: 0 0 0 50px #243d83, 0 0 0 100px #6592cf;
+}
+
+/* ---------------------- */
+/* art 2 */
+/* ---------------------- */
+.art2 {
+  background: #62306d;
+}
+.art2 div {
+  width: 100px;
+  height: 100px;
+  background: #f7ec7d;
+  position: relative;
+  border-radius: 0 0 50% 50%;
+}
+.art2 div:nth-child(1) {
+  left: 50px;
+  top: 150px;
+}
+.art2 div:nth-child(2) {
+  left: 150px;
+  transform: rotateX(180deg) translateY(50px);
+}
+.art2 div:nth-child(3) {
+  left: 250px;
+  top: -50px;
+}
+
+/* ---------------------- */
+/* art 3 */
+/* ---------------------- */
+.art3 {
+  background-color: #0b2429;
+}
+.art3 div {
+  width: 120px;
+  height: 120px;
+  background: #f3ac3c;
+  position: relative;
+}
+.art3 div:nth-child(1) {
+  border-radius: 50% 0 50% 50%;
+  top: 150px;
+  left: 80px;
+  z-index: 4;
+}
+.art3 div:nth-child(2) {
+  border-radius: 50% 0 50% 50%;
+  top: -30px;
+  left: 140px;
+  background: #998235;
+  z-index: 3;
+}
+.art3 div:nth-child(3) {
+  border-radius: 50%;
+  top: -210px;
+  left: 200px;
+  z-index: 2;
+}
+/* ---------------------- */
+/* art 4 */
+/* ---------------------- */
+.art4 {
+  background-color: #e3516e;
+}
+.circle6 {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.circle6 > div {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.circle6 div:nth-child(1) {
+  background-color: #51b5a9;
+}
+
+.circle6 div:nth-child(2) {
+  left: 100px;
+  background-color: #fade8b;
+}
+
+.circle6 div:nth-child(3) {
+  top: 100px;
+  background-color: #f7f3d7;
+}
+
+.circle6 div:nth-child(4) {
+  top: 100px;
+  left: 100px;
+  background-color: #e3516e;
+}
+
+/* ---------------------- */
+/* art 5 */
+/* ---------------------- */
+.art5 {
+  background-color: #0b2429;
+  position: relative;
+}
+.art5 div {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  border-radius: 68% 0 68% 0;
+}
+.art5 div:nth-child(1) {
+  top: 75px;
+  left: 75px;
+  background-color: #1a4341;
+}
+.art5 div:nth-child(2) {
+  top: 75px;
+  left: 125px;
+  background-color: #998235;
+}
+.art5 div:nth-child(3) {
+  top: 75px;
+  left: 175px;
+  background-color: #f3ac3c;
+}
+
+/* ---------------------- */
+/* art 6 */
+/* ---------------------- */
+.art6 {
+  background: #222730;
+}
+.art6 div {
+  width: 400px;
+  height: 150px;
+  background: #4caab3;
+  position: relative;
+  top: 75px;
+}
+.art6 div::before,
+.art6 div::after {
+  content: "";
+  position: absolute;
+}
+.art6 div::before {
+  width: 150px;
+  height: 150px;
+  background: #4caab3;
+  left: 125px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 50px #222730;
+}
+.art6 div::after {
+  width: 50px;
+  height: 50px;
+  background: #393e46;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ---------------------- */
+/* art 7 */
+/* ---------------------- */
+.art7 {
+  background: #f2f2b6;
+}
+.art7 div {
+  width: 0px;
+  height: 0px;
+  position: relative;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  border-top: 130px solid #fd4602;
+  left: 80px;
+  top: 85px;
+  z-index: 1;
+}
+.art7 div::before,
+.art7 div::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+.art7 div::before {
+  border-top: 130px solid #ff6d00;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  top: -130px;
+  left: -95px;
+}
+.art7 div::after {
+  border-bottom: 130px solid #fd4602;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  top: -130px;
+  left: 15px;
+}
+.art7 span {
+  width: 0;
+  height: 0;
+  display: inline-block;
+  position: relative;
+  border-bottom: 130px solid #ff6d00;
+  border-left: 75px solid transparent;
+  border-right: 75px solid transparent;
+  top: -45px;
+  left: 190px;
+}
+
+/* ---------------------- */
+/* art 8 */
+/* ---------------------- */
+.art8 {
+  background: #09042a;
+}
+.art8 div {
+  width: 150px;
+  height: 150px;
+  background: #7b3f61;
+  border-radius: 50%;
+  position: relative;
+  top: 75px;
+  left: 75px;
+  box-shadow: 100px 0 0 0 #e78481;
+  overflow: hidden;
+}
+.art8 div::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #09042a;
+  left: 100px;
+}
+
+/* ---------------------- */
+/* art 9 */
+/* ---------------------- */
+.art9 {
+  background: #0b2429;
+}
+.art9 div {
+  width: 200px;
+  height: 200px;
+  background: #998235;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  transform: rotate(45deg);
+  border-radius: 100px 0;
+}
+.art9 div::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #0b2429;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 0 45px #f3ac3c, 0 0 0 65px #0b2429;
+}
+
+/* ---------------------- */
+/* art 10 */
+/* ---------------------- */
+.art10 {
+  background: #09042a;
+}
+.art10 div {
+  width: 60px;
+  height: 55px;
+  background: #e78481;
+  position: relative;
+  left: 170px;
+  top: 120px;
+}
+.art10 div::before,
+.art10 div::after {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #09042a;
+  box-shadow: 0 0 0 10px #e78481;
+  top: 0;
+}
+.art10 div::before {
+  left: -60px;
+}
+.art10 div::after {
+  left: 60px;
+}
+.art10 span {
+  width: 60px;
+  height: 60px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #f5bb9c;
+  position: relative;
+  top: 12px;
+  left: 170px;
+  box-shadow: 0 0 0 10px #09042a;
+}
+.art10 span::before {
+  content: "";
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #f5bb9c;
+  top: 106px;
+  box-shadow: 0 0 0 10px #09042a;
+}
+
+/* ---------------------- */
+/* art 11 */
+/* ---------------------- */
+.art11 {
+  background: #0b2429;
+}
+.art11 div {
+  width: 100px;
+  height: 100px;
+  background: #f3ac3c;
+  position: relative;
+  top: 135px;
+  left: 150px;
+  transform: rotate(45deg);
+}
+.art11 div::before,
+.art11 div::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+}
+.art11 div::before {
+  top: -25px;
+  left: -75px;
+  transform: skewY(45deg) scaleX(0.5);
+  background: #998235;
+}
+.art11 div::after {
+  top: -75px;
+  left: -25px;
+  transform: skewX(45deg) scaleY(0.5);
+  background: #1a4341;
+}
+
+/* ---------------------- */
+/* art 12 */
+/* ---------------------- */
+.art12 {
+  background: #62306d;
+}
+.art12 div {
+  width: 200px;
+  height: 100px;
+  background: linear-gradient(to right, #f7ec7d 140px, #e38f66 140px);
+  position: relative;
+  top: 100px;
+  left: 100px;
+}
+.art12 div::before,
+.art12 div::after {
+  content: "";
+  position: absolute;
+  background: #62306d;
+}
+.art12 div::before {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: -10px;
+  left: 130px;
+  box-shadow: 0 100px 0 0 #62306d;
+}
+.art12 div::after {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -20px;
+  left: -20px;
+  box-shadow: 0 100px 0 0 #62306d, 200px 0 0 0 #62306d, 200px 100px 0 0 #62306d;
+}
+
+/* ---------------------- */
+/* art 13 */
+/* ---------------------- */
+.art13 {
+  background: #222;
+}
+.art13 div {
+  width: 100px;
+  height: 30px;
+  background: #f2994a;
+  position: relative;
+  top: 95px;
+  left: 120px;
+  transform: rotate(-45deg);
+  border-radius: 10px 0 0 0;
+}
+.art13 div::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background: #f2994a;
+  transform: rotate(90deg);
+  border-radius: 0 5px 0 10px;
+  left: -25px;
+  top: 25px;
+}
+.art13 span {
+  display: inline-block;
+  width: 100px;
+  height: 30px;
+  background: #2d9cdb;
+  position: relative;
+  top: 147px;
+  left: 178px;
+  transform: rotate(-45deg);
+  border-radius: 0 0 10px 0;
+}
+.art13 span::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background: #2d9cdb;
+  transform: rotate(90deg);
+  border-radius: 0 10px 0 5px;
+  left: 45px;
+  top: -26px;
+}
+
+/* ---------------------- */
+/* art 14 */
+/* ---------------------- */
+.art14 {
+  background: #f5d6b4;
+}
+.art14 div {
+  width: 175px;
+  height: 50px;
+  background: #d86f45;
+  border-radius: 50px;
+  position: relative;
+  top: 165px;
+  left: 125px;
+}
+.art14 div::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background: #d86f45;
+  border-radius: 50%;
+  top: -50px;
+  left: -25px;
+  box-shadow: 80px -30px 0 0 #d86f45;
+}
+
+/* ---------------------- */
+/* art 15 */
+/* ---------------------- */
+.art15 {
+  background: #62306d;
+}
+.art15 div {
+  width: 100px;
+  height: 150px;
+  background: #aa445f;
+  position: relative;
+  top: 50px;
+  left: 80px;
+  border-radius: 50px;
+  box-shadow: 140px 50px 0 0 #e38f66;
+}
+.art15 div::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #f7ec7d;
+  top: 50px;
+  box-shadow: 140px 0 0 0 #f7ec7d;
+}
+
+/* ---------------------- */
+/* art 16 */
+/* ---------------------- */
+.art16 {
+  background: #998235;
+}
+.art16 div {
+  width: 80px;
+  height: 100px;
+  background: #1a4341;
+  position: relative;
+  top: 60px;
+  left: 110px;
+  border-radius: 0 50px;
+}
+.art16 div::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 100px;
+  border-radius: 50px 0;
+  background: #1a4341;
+  top: 80px;
+  left: 100px;
+}
+.art16 p {
+  width: 80px;
+  height: 60px;
+  position: relative;
+  background: #f3ac3c;
+  border-radius: 0 50px;
+  top: 80px;
+  left: 110px;
+}
+.art16 p::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  background: #f3ac3c;
+  border-radius: 50px 0;
+  top: -120px;
+  left: 100px;
+}
+
+/* ---------------------- */
+/* art 17 */
+/* ---------------------- */
+.art17 {
+  background: #6592cf;
+}
+.art17 div {
+  width: 120px;
+  height: 60px;
+  background: #6592cf;
+  position: relative;
+  top: 200px;
+  left: 140px;
+  border-radius: 0 0 100px 100px;
+  border: 20px solid #060f55;
+  border-top: 0;
+}
+.art17 div::before,
+.art17 div::after {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  border-radius: 100px 100px 0 0;
+  border: 20px solid #060f55;
+  border-bottom: 0;
+}
+.art17 div::before {
+  top: -160px;
+  left: -120px;
+}
+.art17 div::after {
+  top: -160px;
+  left: 80px;
+}
+/* ---------------------- */
+/* art 18 */
+/* ---------------------- */
+.art18 {
+  background: #e38f66;
+}
+.art18 div {
+  width: 80px;
+  height: 80px;
+  background: #aa445f;
+  border-radius: 50%;
+  position: relative;
+  left: 160px;
+  top: 110px;
+  box-shadow: 0 0 0 30px #f7ec7d, 0 0 0 60px #aa445f;
+}
+.art18 div::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background: #aa445f;
+  top: -40px;
+  left: -40px;
+  border-radius: 40px 0;
+  box-shadow: 80px 80px 0 0 #aa445f;
+}
+
+/* ---------------------- */
+/* art 19 */
+/* ---------------------- */
+.art19 {
+  background: #1a4341;
+}
+.art19 div {
+  width: 75px;
+  height: 150px;
+  background: #998235;
+  position: relative;
+  top: 75px;
+  left: 125px;
+  border-radius: 100px 0 0 100px;
+}
+
+.art19 div::before,
+.art19 div::after {
+  content: "";
+  position: absolute;
+}
+.art19 div::before {
+  width: 100px;
+  height: 100px;
+  background: #f3ac3c;
+  top: -25px;
+  left: 75px;
+  border-radius: 0 100px 0 0;
+}
+.art19 div::after {
+  width: 30px;
+  height: 30px;
+  background: #0b2429;
+  border-radius: 50%;
+  top: 30px;
+  left: 30px;
+}
+
+/* ---------------------- */
+/* art 20 */
+/* ---------------------- */
+.art20 {
+  background: #007065;
+}
+.art20 div {
+  width: 0;
+  height: 0;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+  border-bottom: 100px solid #00a79d;
+  position: relative;
+  top: 150px;
+  left: 75px;
+}
+.art20 div::before,
+.art20 div::after {
+  content: "";
+  position: absolute;
+  border-left: 125px solid transparent;
+  border-right: 125px solid transparent;
+}
+.art20 div::before {
+  top: -50px;
+  left: -125px;
+  border-bottom: 100px solid #f5c181;
+}
+.art20 div::after {
+  top: -100px;
+  left: -125px;
+  border-bottom: 100px solid #ffeecf;
+}
+
+/* ---------------------- */
+/* art 21 */
+/* ---------------------- */
+.art21 {
+  background: #293462;
+}
+.art21 div {
+  width: 100px;
+  height: 150px;
+  background: #fff1c1;
+  position: relative;
+  top: 50px;
+  left: 150px;
+  border-radius: 100px 100px 40px 40px;
+}
+.art21 div::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 50px;
+  background: linear-gradient(#a64942 10px, #fe5f55 10px 50px);
+  top: 150px;
+  left: 35px;
+  border-radius: 0 0 10px 10px;
+}
+/* ---------------------- */
+/* art 22 */
+/* ---------------------- */
+.art22 {
+  background: #6592cf;
+}
+.art22 div {
+  width: 250px;
+  height: 250px;
+  background: #243d83;
+  position: relative;
+  top: 25px;
+  left: 75px;
+}
+.art22 div::before,
+.art22 div::after {
+  content: "";
+  position: absolute;
+}
+.art22 div::before {
+  width: 150px;
+  height: 150px;
+  background: #6592cf;
+  top: 50px;
+  left: 50px;
+  transform: rotate(15deg);
+}
+.art22 div::after {
+  width: 75px;
+  height: 75px;
+  background: #243d83;
+  top: 88px;
+  left: 88px;
+  transform: rotate(30deg);
+}
+
+/* ---------------------- */
+/* art 23 */
+/* ---------------------- */
+.art23 {
+  background: #1a4341;
+}
+.art23 div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    #998235 30px,
+    transparent 30px 170px,
+    #998235 170px
+  );
+  position: relative;
+  border-radius: 50%;
+  left: 100px;
+  top: 50px;
+}
+.art23 div::before {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  background: linear-gradient(
+    transparent 75px,
+    #f3ac3c 75px 94px,
+    transparent 95px 115px,
+    #f3ac3c 115px 135px,
+    transparent 135px 154px,
+    #f3ac3c 155px 175px,
+    transparent 175px 250px
+  );
+  left: -25px;
+  top: -25px;
+}
+
+/* ---------------------- */
+/* art 24 */
+/* ---------------------- */
+.art24 {
+  background: #6592cf;
+}
+.art24 div {
+  width: 200px;
+  height: 200px;
+  background: #243d83;
+  position: relative;
+  left: 100px;
+  top: 50px;
+  border-radius: 0 100px 100px 100px;
+}
+.art24 div::before,
+.art24 div::after {
+  content: "";
+  position: absolute;
+  background: #6592cf;
+}
+.art24 div::before {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+}
+.art24 div::after {
+  width: 50px;
+  height: 100px;
+  top: 0px;
+  left: 50px;
+}
+/* ---------------------- */
+/* art 25 */
+/* ---------------------- */
+.art25 {
+  background: #293462;
+}
+.art25 div {
+  width: 200px;
+  height: 200px;
+  background: #fe5f55;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px 100px 50px 50px;
+  overflow: hidden;
+}
+.art25 div::before,
+.art25 div::after {
+  content: "";
+  position: absolute;
+  background: #fff1c1;
+}
+.art25 div::before {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  left: 20px;
+  top: 90px;
+  box-shadow: 100px 0 0 0 #fff1c1, 0 -120px 0 20px #fff1c1,
+    100px -120px 0 20px #fff1c1;
+}
+.art25 div::after {
+  width: 40px;
+  height: 10px;
+  border-radius: 5px;
+  top: 170px;
+  left: 80px;
+}
+
+/* ---------------------- */
+/* art 26 */
+/* ---------------------- */
+.art26 {
+  background: #1a4341;
+}
+.art26 div {
+  width: 160px;
+  height: 180px;
+  background: linear-gradient(
+    #f3ac3c 20px,
+    transparent 20px 40px,
+    #f3ac3c 40px 60px,
+    transparent 60px 80px,
+    #f3ac3c 80px 100px,
+    transparent 100px 120px,
+    #f3ac3c 120px 140px,
+    transparent 140px 160px,
+    #f3ac3c 160px 180px
+  );
+  position: relative;
+  left: 120px;
+  top: 60px;
+}
+.art26 div::before {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: #1a4341;
+  border-radius: 50%;
+  top: -60px;
+  left: -270px;
+  box-shadow: 400px 0 0 0 #1a4341;
+}
+
+/* ---------------------- */
+/* art 27 */
+/* ---------------------- */
+.art27 {
+  background: #1a4341;
+}
+.art27 div {
+  width: 90px;
+  height: 120px;
+  background: #1a4341;
+  position: relative;
+  left: 155px;
+  box-shadow: 0 0 0 30px #998235, 0 0 0 60px #1a4341, 0 0 0 90px #f3ac3c;
+}
+.art27 div::before,
+.art27 div::after {
+  content: "";
+  position: absolute;
+}
+.art27 div::before {
+  width: 270px;
+  height: 30px;
+  background: #998235;
+  top: 240px;
+  left: -90px;
+}
+.art27 div::after {
+  width: 30px;
+  height: 300px;
+  background: #f3ac3c;
+  left: 30px;
+}
+
+/* ---------------------- */
+/* art 28 */
+/* ---------------------- */
+.art28 {
+  background: #293462;
+}
+.art28 div {
+  width: 200px;
+  height: 200px;
+  background: #fff1c1;
+  border-radius: 50%;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  overflow: hidden;
+}
+.art28 div::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #fe5f55;
+  top: 140px;
+  left: 5px;
+  transform: rotate(45deg);
+  box-shadow: 84px -74px 0 55px #fe5f55;
+}
+
+/* ---------------------- */
+/* art 29 */
+/* ---------------------- */
+.art29 {
+  background: #1a4341;
+}
+.art29 div {
+  width: 100px;
+  height: 100px;
+  background: #f3ac3c;
+  border-radius: 50%;
+  position: relative;
+  top: 100px;
+  left: 150px;
+}
+.art29 div::before,
+.art29 div::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 180px;
+  background: #f3ac3c;
+  border-radius: 5px;
+}
+.art29 div::before {
+  top: -50px;
+  left: 45px;
+}
+.art29 div::after {
+  transform: rotate(-120deg);
+  left: 52px;
+  top: -44px;
+}
+.art29 p {
+  position: relative;
+  width: 10px;
+  height: 180px;
+  background: #f3ac3c;
+  border-radius: 5px;
+  transform: rotate(120deg);
+  left: 200px;
+  top: -35px;
+}
+.art29 p::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #998235;
+  left: -34px;
+  top: 88px;
+  box-shadow: 55px -5px 0 5px #998235, 30px 30px 0 10px #998235;
+}
+/* ---------------------- */
+/* art 30 */
+/* ---------------------- */
+.art30 {
+  background: #6592cf;
+}
+.art30 div {
+  width: 150px;
+  height: 100px;
+  background: #243d83;
+  position: relative;
+  top: 150px;
+  left: 125px;
+  border-radius: 0 0 10px 10px;
+}
+.art30 div::before,
+.art30 div::after {
+  content: "";
+  position: absolute;
+}
+.art30 div::before {
+  width: 0;
+  height: 0;
+  border-left: 100px solid transparent;
+  border-right: 100px solid transparent;
+  border-bottom: 100px solid #243d83;
+  top: -100px;
+  left: -25px;
+}
+.art30 div::after {
+  width: 100px;
+  height: 10px;
+  border-radius: 10px;
+  background: #eeb850;
+  left: 25px;
+  top: -5px;
+}
+.art30 p {
+  width: 50px;
+  height: 50px;
+  background: #eeb850;
+  position: relative;
+  left: 175px;
+  top: 100px;
+  border-radius: 10px 10px 0 0;
+}
+
+/* ---------------------- */
+/* art 31 */
+/* ---------------------- */
+.art31 {
+  background: #1a4341;
+}
+.art31 div {
+  width: 100px;
+  height: 140px;
+  background: linear-gradient(#f3ac3c 55px, #998235 55px 140px);
+  position: relative;
+  left: 150px;
+  top: 110px;
+  border-radius: 20px;
+}
+.art31 div::before,
+.art31 div::after {
+  content: "";
+  position: absolute;
+}
+.art31 div::before {
+  width: 20px;
+  height: 20px;
+  background: #998235;
+  border-radius: 50%;
+  left: 130px;
+  top: 20px;
+  box-shadow: 0 -30px 0 0 #998235, 0 -60px 0 0 #f3ac3c, 0 -65px 0 0 #f3ac3c,
+    0 -70px 0 0 #f3ac3c, -115px 25px 0 15px #998235, -65px 25px 0 15px #f3ac3c;
+}
+.art31 div::after {
+  width: 50px;
+  height: 30px;
+  background: #f3ac3c;
+  border-radius: 10px 10px 0 0;
+  top: -20px;
+  left: 25px;
+}
+.art31 p {
+  height: 20px;
+  width: 150px;
+  background: #f3ac3c;
+  border-radius: 10px 10px 0 10px;
+  position: relative;
+  top: -86px;
+  left: 150px;
+}
+.art31 p::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 40px;
+  background: #f3ac3c;
+  left: 40px;
+}
+/* ---------------------- */
+/* art 32 */
+/* ---------------------- */
+.art32 {
+  background: #293462;
+}
+.art32 div {
+  width: 150px;
+  height: 100px;
+  background: #fff1c1;
+  position: relative;
+  left: 125px;
+  top: 100px;
+  border-radius: 0 0 50px 50px;
+}
+.art32 div::before,
+.art32 div::after {
+  content: "";
+  position: absolute;
+}
+.art32 div::before {
+  height: 10px;
+  width: 40px;
+  border-radius: 10px;
+  background: #fe5f55;
+  left: 20px;
+  top: 20px;
+  box-shadow: 0 20px 0 0 #fe5f55;
+}
+.art32 div::after {
+  height: 40px;
+  width: 40px;
+  background: #fe5f55;
+  border-radius: 50%;
+  left: 90px;
+  top: 40px;
+}
+.art32 p {
+  width: 60px;
+  height: 60px;
+  position: relative;
+  top: 0px;
+  left: 66px;
+  border-radius: 40px 0 0 40px;
+  border: 10px solid #fff1c1;
+  border-right: 0;
+}
+.art32 p::before {
+  content: "";
+  position: absolute;
+  width: 55px;
+  height: 40px;
+  left: 195px;
+  top: -10px;
+  border: 10px solid #fff1c1;
+  border-left: 0;
+  border-radius: 0 40px 40px 0;
+}
+
+/* ---------------------- */
+/* art 33 */
+/* ---------------------- */
+.art33 {
+  background: #f9e492;
+}
+.art33 div {
+  width: 50px;
+  height: 45px;
+  background: #191919;
+  position: relative;
+  top: 178px;
+  left: 175px;
+  border-radius: 0 0 10px 10px;
+}
+.art33 div::before,
+.art33 div::after {
+  content: "";
+  position: absolute;
+  background: #191919;
+}
+.art33 div::before {
+  width: 100px;
+  height: 40px;
+  top: -40px;
+  left: -25px;
+  border-radius: 0 0 10px 10px;
+}
+.art33 div::after {
+  width: 20px;
+  height: 35px;
+  border-radius: 20px;
+  left: 55px;
+  top: -80px;
+}
+.art33 p {
+  width: 20px;
+  height: 45px;
+  background: #191919;
+  border-radius: 10px;
+  position: relative;
+  left: 155px;
+  top: 42px;
+  box-shadow: 50px 0 0 0 #191919;
+}
+.art33 p::before,
+.art33 p::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  border-radius: 10px;
+}
+.art33 p::before {
+  height: 55px;
+  background: #191919;
+  left: 25px;
+  top: -10px;
+}
+.art33 p::after {
+  height: 65px;
+  background: #191919;
+  left: 2px;
+  top: 20px;
+  transform: rotate(60deg);
+  box-shadow: 0 0 0 5px #f9e492;
+}
+/* ---------------------- */
+/* art 34 */
+/* ---------------------- */
+.art34 {
+  background: #191919;
+}
+.art34 div {
+  width: 100px;
+  height: 50px;
+  background: #f9e492;
+  position: relative;
+  top: 100px;
+  left: 100px;
+  border-radius: 50px 50px 0 0;
+}
+.art34 div::before,
+.art34 div::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 100px;
+  background: #4f77ff;
+}
+.art34 div::before {
+  left: 50px;
+  top: 50px;
+  border-radius: 50px 0 0 50px;
+}
+.art34 div::after {
+  left: 100px;
+  top: -50px;
+  border-radius: 0 50px 50px 0;
+}
+.art34 p {
+  width: 100px;
+  height: 50px;
+  position: relative;
+  background: #f9e492;
+  top: 100px;
+  left: 200px;
+  border-radius: 0 0 50px 50px;
+}
+
+/* ---------------------- */
+/* art 35 */
+/* ---------------------- */
+.art35 {
+  background: #191919;
+}
+.art35 div {
+  width: 110px;
+  height: 110px;
+  background: #4f77ff;
+  position: relative;
+  top: 95px;
+  left: 145px;
+}
+.art35 div::before,
+.art35 div::after {
+  content: "";
+  position: absolute;
+}
+.art35 div::before {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #191919;
+  top: -20px;
+  left: -20px;
+  box-shadow: 90px 0 0 0 #191919, 0 90px 0 0 #191919, 90px 90px 0 0 #191919;
+}
+.art35 div::after {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #f9e492;
+  left: -20px;
+  top: -20px;
+  box-shadow: 105px 0 0 0 #f9e492, 0 105px 0 0 #f9e492, 105px 105px 0 0 #f9e492;
+}
+.art35 p {
+  width: 30px;
+  height: 30px;
+  position: relative;
+  border-radius: 50%;
+  background: #4f77ff;
+  top: -35px;
+  left: 125px;
+  box-shadow: 120px 0 0 0 #4f77ff, 0 120px 0 0 #4f77ff, 120px 120px 0 0 #4f77ff;
+}
+
+/* ---------------------- */
+/* art 36 */
+/* ---------------------- */
+.art36 {
+  background: #191919;
+}
+.art36 div {
+  width: 20px;
+  height: 90px;
+  background: #f9e492;
+  position: relative;
+  top: 165px;
+  left: 190px;
+  border-radius: 20px;
+}
+.art36 div::before,
+.art36 div::after {
+  content: "";
+  position: absolute;
+}
+.art36 div::before {
+  width: 40px;
+  height: 40px;
+  background: #f9e492;
+  border-radius: 50%;
+  top: -20px;
+  left: -10px;
+}
+.art36 div::after {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(transparent 60%, #4f77ff 60%);
+  top: -100px;
+  left: -40px;
+  border-radius: 50%;
+}
+.art36 p {
+  width: 140px;
+  height: 30px;
+  background: #4f77ff;
+  border-radius: 5px 5px 30px 30px;
+  position: relative;
+  top: -5px;
+  left: 130px;
+}
+.art36 p::before,
+.art36 p::after {
+  content: "";
+  position: absolute;
+}
+.art36 p::before {
+  width: 100px;
+  height: 30px;
+  background: #4f77ff;
+  top: -20px;
+  left: 20px;
+  border-radius: 20px 20px 100px 100px;
+  box-shadow: 0 0 0 10px #191919;
+}
+.art36 p::after {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #4f77ff;
+  left: 55px;
+  top: -40px;
+  box-shadow: 0 0 0 10px #191919;
+}
+/* ---------------------- */
+/* art 37 */
+/* ---------------------- */
+.art37 {
+  background: #191919;
+}
+.art37 div {
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(
+    #4f77ff 30px,
+    transparent 30px 40px,
+    #4f77ff 40px 70px,
+    transparent 70px 80px,
+    #4f77ff 80px 110px,
+    transparent 110px 120px,
+    #4f77ff 120px 150px
+  );
+  position: relative;
+  top: 75px;
+  left: 125px;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 1;
+}
+.art37 div::before,
+.art37 div::after {
+  content: "";
+  position: absolute;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 10px #191919;
+}
+.art37 div::before {
+  left: 40px;
+  top: -25px;
+}
+.art37 div::after {
+  left: -90px;
+  top: -25px;
+}
+.art37 p {
+  height: 170px;
+  width: 10px;
+  background: #191919;
+  position: relative;
+  left: 195px;
+  top: -90px;
+  z-index: 3;
+}
+/* ---------------------- */
+/* art 38 */
+/* ---------------------- */
+.art38 {
+  background: #191919;
+}
+.art38 div {
+  width: 150px;
+  height: 200px;
+  background: #f2ad43;
+  position: relative;
+  top: 50px;
+  left: 125px;
+  border-radius: 100px 100px 30px 30px;
+  overflow: hidden;
+}
+.art38 div::before,
+.art38 div::after {
+  content: "";
+  position: absolute;
+}
+.art38 div::before {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: #fff58f;
+  left: 45px;
+  top: 90px;
+}
+.art38 div::after {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #824b20;
+  top: 100px;
+  left: 50px;
+  box-shadow: -150px 0px 0 0px #e08027;
+}
+
+/* ---------------------- */
+/* art 39 */
+/* ---------------------- */
+.art39 {
+  background: #191919;
+}
+.art39 div {
+  width: 70px;
+  height: 70px;
+  background: #191919;
+  position: relative;
+  top: 114px;
+  left: 166px;
+  border: 10px solid #5dbcf9;
+}
+.art39 div::before,
+.art39 div::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #191919;
+}
+.art39 div::before {
+  left: -70px;
+  top: -70px;
+  border-radius: 60px 60px 0 60px;
+  border: 10px solid #5dbcf9;
+}
+.art39 div::after {
+  left: 50px;
+  top: -70px;
+  border-radius: 60px 60px 60px 0;
+  border: 10px solid #5dbcf9;
+}
+.art39 p {
+  width: 70px;
+  height: 70px;
+  background: #191919;
+  position: relative;
+  top: 103px;
+  left: 106px;
+  border-radius: 50px 0 50px 50px;
+  border: 10px solid #5dbcf9;
+}
+.art39 p::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #191919;
+  border-radius: 0 50px 50px 50px;
+  top: -10px;
+  left: 110px;
+  border: 10px solid #5dbcf9;
+}
+/* ---------------------- */
+/* art 40 */
+/* ---------------------- */
+.art40 {
+  background: radial-gradient(
+    circle,
+    #e08027 50px,
+    #824b20 50px 80px,
+    #191919 80px 400px
+  );
+}
+.art40 div {
+  width: 120px;
+  height: 60px;
+  background: #e08027;
+  position: relative;
+  top: 150px;
+  left: 140px;
+  border-radius: 0 0 100px 100px;
+  border: 20px solid #fff58f;
+  border-top: 0;
+}
+.art40 div::before {
+  content: "";
+  position: absolute;
+  background: #fff58f;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  left: -20px;
+  top: -10px;
+  box-shadow: 100px 0 0 0 #fff58f;
+}
+/* ---------------------- */
+/* art 41 */
+/* ---------------------- */
+.art41 {
+  background: #191919;
+}
+.art41 div {
+  width: 50px;
+  height: 50px;
+  background: #5dbcf9;
+  position: relative;
+  top: 125px;
+  left: 75px;
+  border-radius: 10px 0 0 10px;
+}
+.art41 div::before,
+.art41 div::after {
+  content: "";
+  position: absolute;
+}
+.art41 div::before {
+  width: 0;
+  height: 0;
+  border-top: 100px solid transparent;
+  border-right: 100px solid #5dbcf9;
+  border-bottom: 100px solid transparent;
+  left: 25px;
+  top: -75px;
+}
+.art41 div::after {
+  width: 200px;
+  height: 200px;
+  background: red;
+  top: -75px;
+  left: 50px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 10px #5dbcf9, inset 0 0 0 25px #191919,
+    inset 0 0 0 35px #5dbcf9, inset 0 0 0 50px #191919, inset 0 0 0 60px #5dbcf9,
+    inset 0 0 0 100px #191919;
+  clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
+}
+/* ---------------------- */
+/* art 42 */
+/* ---------------------- */
+.art42 {
+  background: #191919;
+}
+.art42 div {
+  width: 250px;
+  height: 80px;
+  background: #f2ad43;
+  position: relative;
+  top: 100px;
+  left: 80px;
+}
+.art42 div::before,
+.art42 div::after {
+  content: "";
+  position: absolute;
+}
+.art42 div::before {
+  width: 80px;
+  height: 30px;
+  background: #191919;
+  left: 80px;
+  border-radius: 0 0 10px 10px;
+}
+.art42 div::after {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f2ad43;
+  left: 105px;
+  top: 5px;
+  box-shadow: 20px 0 0 0 #f2ad43, -115px 40px 0 45px #191919,
+    -49px 146px 0 91px #191919, 69px 145px 0 90px #191919,
+    135px 40px 0 45px #191919;
+}
+.art42 p {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  background: #f2ad43;
+  left: 190px;
+  top: 30px;
+}
+
+/* ---------------------- */
+/* art 43 */
+/* ---------------------- */
+.art43 {
+  background: #191919;
+}
+.art43 div {
+  width: 10px;
+  height: 300px;
+  background: #5dbcf9;
+  position: relative;
+  left: 45px;
+  box-shadow: 150px 0 0 0 #5dbcf9, 300px 0 0 0 #5dbcf9;
+}
+.art43 div::before {
+  content: "";
+  position: absolute;
+  background: #5dbcf9;
+  width: 150px;
+  height: 40px;
+  top: 30px;
+  box-shadow: 300px 0 0 0 #5dbcf9, -150px 50px 0 0 #5dbcf9,
+    150px 50px 0 0 #5dbcf9, 0 150px 0 0 #5dbcf9, 300px 150px 0 0 #5dbcf9,
+    -150px 200px 0 0 #5dbcf9, 150px 200px 0 0 #5dbcf9;
+}
+
+/* ---------------------- */
+/* art 44 */
+/* ---------------------- */
+.art44 {
+  background: #191919;
+}
+.art44 div {
+  width: 50px;
+  height: 50px;
+  background: #f2ad43;
+  position: relative;
+  top: 66px;
+  left: 175px;
+  border-radius: 50%;
+  box-shadow: 0 119px 0 0 #824b20;
+}
+.art44 div::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background: #e08027;
+  top: 24px;
+  left: -35px;
+  border-radius: 60px 60px 10px 10px;
+}
+/* ---------------------- */
+/* art 45 */
+/* ---------------------- */
+.art45 {
+  background: #191919;
+}
+.art45 div {
+  width: 115px;
+  height: 115px;
+  background: #e08027;
+  position: relative;
+  top: 77px;
+  left: 90px;
+  border-radius: 0 100px 100px 100px;
+}
+.art45 div::before,
+.art45 div::after {
+  content: "";
+  position: absolute;
+  background: #e08027;
+}
+.art45 div::before {
+  width: 50px;
+  height: 55px;
+  top: 80px;
+  left: 83px;
+  transform: rotate(-45deg);
+}
+.art45 div::after {
+  width: 115px;
+  height: 115px;
+  top: -10px;
+  left: 96px;
+  border-radius: 100px 0 100px 100px;
+  border: 10px solid #191919;
+}
+.art45 p {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: #191919;
+  position: relative;
+  top: -27px;
+  left: 100px;
+  box-shadow: 110px 0 0 0 #191919;
+}
+.art45 p::before,
+.art45 p::after {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 5px;
+  background: #191919;
+  border-radius: 20px 20px 0 0;
+
+  border: 10px solid #e08027;
+  border-bottom: 0;
+}
+.art45 p::before {
+  top: 36px;
+  left: 31px;
+}
+.art45 p::after {
+  top: 36px;
+  left: 141px;
+}
+/* ---------------------- */
+/* art 46 */
+/* ---------------------- */
+.art46 {
+  background: #293462;
+}
+.art46 div {
+  width: 150px;
+  height: 100px;
+  background: #a64942;
+  position: relative;
+  top: 110px;
+  left: 125px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.art46 div::before {
+  width: 400px;
+  height: 400px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background: #fe5f55;
+  top: -330px;
+  left: -125px;
+}
+.art46 p {
+  width: 50px;
+  height: 50px;
+  background: #fe5f55;
+  border-radius: 50%;
+  position: relative;
+  top: -11px;
+  left: 140px;
+  box-shadow: 70px 0 0 0 #fe5f55;
+}
+.art46 p::before,
+.art46 p::after {
+  content: "";
+  position: absolute;
+}
+.art46 p::before {
+  width: 30px;
+  height: 30px;
+  background: #fff1c1;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  box-shadow: 70px 0 0 0 #fff1c1;
+}
+.art46 p::after {
+  width: 10px;
+  height: 10px;
+  background: #293462;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  box-shadow: 70px 0 0 0 #293462, 25px 55px 0 0 #293462, 45px 55px 0 0 #293462;
+}
+/* ---------------------- */
+/* art 47 */
+/* ---------------------- */
+.art47 {
+  background: #998235;
+  position: relative;
+  z-index: 1;
+}
+.art47::before,
+.art47::after {
+  content: "";
+  position: absolute;
+  height: 180px;
+  width: 80px;
+  background: #0b2429;
+  border-radius: 50%;
+  box-shadow: inset 16px 0 0 0 #1a4341;
+}
+.art47::before {
+  top: 60px;
+  left: 50px;
+}
+.art47::after {
+  top: 60px;
+  left: 270px;
+  transform: rotate(180deg);
+  z-index: -1;
+}
+.art47 div {
+  width: 180px;
+  height: 180px;
+  background: #1a4341;
+  position: relative;
+  top: 60px;
+  left: 110px;
+  border-radius: 100px;
+}
+.art47 div::before,
+.art47 div::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(#1a4341 50%, transparent 50%),
+    radial-gradient(#0b2429 10px, #998235 10px);
+  border-radius: 50%;
+}
+.art47 div::before {
+  top: 70px;
+  left: 40px;
+}
+.art47 div::after {
+  top: 70px;
+  left: 100px;
+}
+.art47 p {
+  width: 120px;
+  height: 60px;
+  position: relative;
+  top: -6px;
+  left: 140px;
+  border-radius: 100px 100px 0 0;
+  border: 20px solid #fff;
+  border-bottom: 0;
+}
+.art47 p::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 150px;
+  background: #0b2429;
+  border-radius: 20px;
+  top: -30px;
+  left: 20px;
+}
+/* ---------------------- */
+/* art 48 */
+/* ---------------------- */
+.art48 {
+  background: #f3ac3c;
+}
+.art48 div {
+  width: 150px;
+  height: 150px;
+  background: #998235;
+  position: relative;
+  top: 35px;
+  left: 125px;
+  border-radius: 100px 100px 80px 80px;
+  overflow: hidden;
+  z-index: 5;
+}
+.art48 div::before,
+.art48 div::after {
+  content: "";
+  position: absolute;
+}
+.art48 div::before {
+  width: 0;
+  height: 0;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 40px solid #1a4341;
+  left: 35px;
+  top: -15px;
+}
+.art48 div::after {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #1a4341;
+  left: 25px;
+  top: 60px;
+  box-shadow: 80px 0 0 0 #1a4341;
+}
+.art48 [a] {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #1a4341;
+  position: relative;
+  top: 75px;
+  left: 125px;
+  box-shadow: 0 0 0 10px #998235;
+}
+.art48 [a]::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background: #1a4341;
+  top: 0px;
+  left: 110px;
+  box-shadow: 0 0 0 10px #998235;
+}
+.art48 [b] {
+  width: 10px;
+  height: 30px;
+  background: #1a4341;
+  position: relative;
+  left: 70px;
+  top: 79px;
+  z-index: 10;
+}
+.art48 [b]::before,
+.art48 [b]::after {
+  /* mustach */
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0px;
+  border: 10px solid #1a4341;
+  clip-path: polygon(0 50%, 100% 50%, 100% 100%, 0 100%);
+}
+.art48 [b]::before {
+  left: -30px;
+}
+.art48 [b]::after {
+  left: 0px;
+}
+.art48 [c] {
+  /* white */
+  width: 100px;
+  height: 40px;
+  background: white;
+  position: relative;
+  left: 25px;
+  top: 63px;
+  border-radius: 20px 20px 50px 50px;
+}
+/* ---------------------- */
+/* art 49 */
+/* ---------------------- */
+.art49 {
+  background: #191919;
+}
+.art49 div {
+  width: 130px;
+  height: 100px;
+  background: #fe5f55;
+  position: relative;
+  top: 65px;
+  left: 135px;
+  border-radius: 60px 60px 0 0;
+}
+.art49 div::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #000000;
+  border-radius: 50%;
+  top: 50px;
+  left: 25px;
+  box-shadow: 70px 0 0 0 #000000;
+}
+.art49 [a] {
+  width: 150px;
+  height: 100px;
+  background: #a64942;
+  position: relative;
+  top: 39px;
+  left: 125px;
+  border-radius: 60px 60px 50px 50px;
+}
+.art49 [a]::before,
+.art49 [a]::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 30px;
+  background: #000000;
+  border-radius: 50%;
+  top: 20px;
+}
+.art49 [a]::before {
+  transform: rotate(45deg);
+  left: 25px;
+}
+.art49 [a]::after {
+  transform: rotate(-45deg);
+  left: 105px;
+}
+.art49 [b] {
+  width: 20px;
+  height: 10px;
+  background: #000000;
+  position: relative;
+  top: 80px;
+  left: 150px;
+  border-radius: 50%;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 5px #fe5f55;
+}
+.art49 [b]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 10px;
+  background: #000000;
+  top: -57px;
+  left: 57px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  box-shadow: 0 0 0 5px #fe5f55;
+}
+/* ---------------------- */
+/* art 50 */
+/* ---------------------- */
+.art50 {
+  background: #998235;
+}
+.art50 div {
+  width: 150px;
+  height: 75px;
+  background: linear-gradient(
+    to right,
+    #191919 25px,
+    #eff33c 25px 35px,
+    #191919 35px 60px,
+    #eff33c 60px 70px,
+    #191919 70px 95px,
+    #eff33c 95px 150px
+  );
+  position: relative;
+  top: 150px;
+  left: 125px;
+  border-radius: 100px;
+}
+.art50 div::before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #191919;
+  left: 115px;
+  top: 20px;
+}
+.art50 p {
+  width: 75px;
+  height: 75px;
+  border-radius: 50px 50px 0 50px;
+  background: #ffffff;
+  position: relative;
+  top: 0;
+  left: 125px;
+}
+.art50 p::before {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  border-radius: 50px 50px 50px 0;
+  background: #ffffff;
+  top: 0;
+  left: 75px;
+}
+/* ---------------------- */
+/* art 51 */
+/* ---------------------- */
+.art51 {
+  background: #191919;
+}
+.art51 div {
+  width: 50px;
+  height: 40px;
+  background: #fe5f55;
+  position: relative;
+  top: 170px;
+  left: 265px;
+  border-radius: 50%;
+  box-shadow: -70px 0 0 0 #a64942, -140px 0 0 0 #fe5f55, -210px 0 0 0 #fe5f55;
+}
+.art51 div::before,
+.art51 div::after {
+  content: "";
+  position: absolute;
+}
+.art51 div::before {
+  width: 10px;
+  height: 100px;
+  background: #fe5f55;
+  left: 40px;
+  top: -80px;
+  box-shadow: -70px 0 0 0 #a64942, -140px 0 0 0 #fe5f55, -210px 0 0 0 #fe5f55;
+}
+.art51 div::after {
+  width: 30px;
+  height: 10px;
+  background: #fe5f55;
+  top: -80px;
+  left: 50px;
+  box-shadow: 0 20px 0 0 #fe5f55, -70px 0 0 0 #a64942, -180px 0 0 0 #fe5f55,
+    -210px 0 0 0 #fe5f55;
+}
+/* ---------------------- */
+/* art 52 */
+/* ---------------------- */
+.art52 {
+  background: #f3ac3c;
+}
+.art52 div {
+  width: 100px;
+  height: 100px;
+  background: #998235;
+  position: relative;
+  top: 80px;
+  left: 115px;
+  border-radius: 100px;
+  box-shadow: -60px 0 0 10px #998235;
+}
+.art52 div::before,
+.art52 div::after {
+  content: "";
+  position: absolute;
+}
+.art52 div::before {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #1a4341;
+  left: 30px;
+  top: 30px;
+  box-shadow: 0 0 0 5px #f3ac3c;
+}
+.art52 div::after {
+  width: 10px;
+  height: 40px;
+  border-radius: 20px;
+  background: #1a4341;
+  left: -30px;
+  top: 30px;
+}
+.art52 p {
+  width: 110px;
+  height: 20px;
+  background: #1a4341;
+  position: relative;
+  top: 140px;
+  left: 210px;
+}
+.art52 p::before,
+.art52 p::after {
+  content: "";
+  position: absolute;
+}
+.art52 p::before {
+  width: 40px;
+  height: 30px;
+  background: #998235;
+  left: 105px;
+  top: -5px;
+  border-radius: 10px;
+}
+.art52 p::after {
+  width: 20px;
+  height: 5px;
+  background: #1a4341;
+  left: 115px;
+  top: 2px;
+  border-radius: 10px;
+  box-shadow: 0 10px 0 0 #1a4341;
+}
+/* ---------------------- */
+/* art 53 */
+/* ---------------------- */
+.art53 {
+  background: #998235;
+}
+.art53 div {
+  width: 180px;
+  height: 100px;
+  background: #191919;
+  position: relative;
+  top: 100px;
+  left: 110px;
+  border-radius: 10px;
+}
+.art53 div::before,
+.art53 div::after {
+  content: "";
+  position: absolute;
+}
+.art53 div::before {
+  width: 20px;
+  height: 70px;
+  border-radius: 5px;
+  background: #ffffff;
+  top: 25px;
+  left: 5px;
+  box-shadow: 25px 0 0 0 #ffffff, 50px 0 0 0 #ffffff, 75px 0 0 0 #ffffff,
+    100px 0 0 0 #ffffff, 125px 0 0 0 #ffffff, 150px 0 0 0 #ffffff;
+}
+.art53 div::after {
+  width: 15px;
+  height: 50px;
+  background: #191919;
+  left: 20px;
+  top: 10px;
+  box-shadow: 25px 0 0 0 #191919, 75px 0 0 0 #191919, 100px 0 0 0 #191919,
+    125px 0 0 0 #191919;
+}
+/* ---------------------- */
+/* art 54 */
+/* ---------------------- */
+.art54 {
+  background: #191919;
+}
+.art54 div {
+  width: 80px;
+  height: 80px;
+  background: #714b67;
+  position: relative;
+  top: 122px;
+  left: 37px;
+  border-radius: 100px;
+  box-shadow: 82px 0 0 0 #8f8f8f, 164px 0 0 0 #8f8f8f, 246px 0 0 0 #8f8f8f;
+}
+.art54 div::before,
+.art54 div::after {
+  content: "";
+  position: absolute;
+}
+.art54 div::before {
+  width: 40px;
+  height: 40px;
+  background: #191919;
+  top: 20px;
+  left: 20px;
+  border-radius: 100px;
+  box-shadow: 82px 0 0 0 #191919, 164px 0 0 0 #191919, 246px 0 0 0 #191919;
+}
+.art54 div::after {
+  width: 20px;
+  height: 60px;
+  background: #8f8f8f;
+  top: -20px;
+  left: 142px;
+  border-radius: 20px;
+}
+/* ---------------------- */
+/* art 55 */
+/* ---------------------- */
+.art55 {
+  background: #f3ac3c;
+}
+.art55 div {
+  width: 30px;
+  height: 30px;
+  background: #1a4341;
+  position: relative;
+  top: 135px;
+  left: 183px;
+  transform: rotate(45deg);
+  box-shadow: 0 0 0 35px #f3ac3c, 0 0 0 65px #998235;
+}
+.art55 div::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background: #f3ac3c;
+  top: -65px;
+  box-shadow: -65px 65px 0 1px #f3ac3c;
+}
+/* ---------------------- */
+/* art 56 */
+/* ---------------------- */
+.art56 {
+  background: #243d83;
+}
+.art56 div {
+  width: 60px;
+  height: 60px;
+  background: #eeb850;
+  position: relative;
+  top: 120px;
+  left: 170px;
+  border-radius: 100px;
+  box-shadow: 42px 42px 0 20px #6592cf, 42px -42px 0 20px #6592cf,
+    -42px -42px 0 20px #6592cf, -42px 42px 0 20px #6592cf;
+}
+.art56 div::before,
+.art56 div::after {
+  content: "";
+  position: absolute;
+}
+.art56 div::before {
+  width: 120px;
+  height: 120px;
+  background: #243d83;
+  top: -30px;
+  left: -30px;
+  transform: rotate(45deg);
+}
+.art56 div::after {
+  width: 60px;
+  height: 60px;
+  background: #eeb850;
+  border-radius: 50%;
+}
+/* ---------------------- */
+/* art 57 */
+/* ---------------------- */
+.art57 {
+  background: #d25b70;
+}
+.art57 div {
+  width: 100px;
+  height: 100px;
+  background: #f7f3da;
+  position: relative;
+  top: 150px;
+  left: 150px;
+}
+.art57 div::before,
+.art57 div::after {
+  content: "";
+  position: absolute;
+}
+.art57 div::before {
+  width: 60px;
+  height: 60px;
+  background: #6cb3a9;
+  top: -72px;
+  left: -36px;
+  transform: rotate(37deg);
+}
+.art57 div::after {
+  width: 80px;
+  height: 80px;
+  background: #f6df96;
+  top: -96px;
+  left: 52px;
+  transform: rotate(37deg);
+}
+/* ---------------------- */
+/* art 58 */
+/* ---------------------- */
+.art58 {
+  background: #191919;
+}
+.art58 div {
+  width: 100px;
+  height: 150px;
+  background: #4f77ff;
+  position: relative;
+  top: 75px;
+  left: 150px;
+  border-radius: 100px 100px 0 0;
+}
+.art58 div::before {
+  content: "";
+  position: absolute;
+  width: 80px;
+  height: 20px;
+  background: #191919;
+  top: 130px;
+  left: 20px;
+  box-shadow: 20px -24px 0 0 #191919, 40px -48px 0 0 #191919,
+    60px -72px 0 0 #191919;
+}
+/* ---------------------- */
+/* art 59 */
+/* ---------------------- */
+.art59 {
+  background: #f3ac3c;
+}
+.art59 div {
+  width: 100px;
+  height: 100px;
+  background: #1a4341;
+  position: relative;
+  top: 65px;
+  left: 65px;
+  border-radius: 10px;
+  box-shadow: 170px 70px 0 0 #1a4341;
+}
+.art59 div::before,
+.art59 div::after {
+  content: "";
+  position: absolute;
+}
+.art59 div::before {
+  width: 70px;
+  height: 50px;
+  background: #1a4341;
+  border-radius: 10px;
+  top: 0px;
+  left: 80px;
+  box-shadow: -10px 10px 0 0 #1a4341, 40px 120px 0 0 #1a4341,
+    50px 110px 0 0 #1a4341;
+}
+.art59 div::after {
+  width: 70px;
+  height: 70px;
+  background: #f3ac3c;
+  border-radius: 10px;
+  top: 50px;
+  left: 100px;
+}
+/* ---------------------- */
+/* art 60 */
+/* ---------------------- */
+.art60 {
+  background: radial-gradient(circle, #f9e492 100px, #191919 100px 400px);
+}
+.art60 div {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  top: 200px;
+  left: 100px;
+  background: #4f77ff;
+  transform: rotate(45deg);
+  overflow: hidden;
+}
+.art60 div::before {
+  content: "";
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #191919;
+  top: -106px;
+  left: -106px;
+}
+/* ---------------------- */
+/* art 61 */
+/* ---------------------- */
+.art61 {
+  background: #f3ac3c;
+}
+.art61 div {
+  width: 400px;
+  height: 400px;
+  background: #998235;
+  position: relative;
+  top: -250px;
+  left: 0px;
+  border-radius: 50%;
+}
+.art61 div::before,
+.art61 div::after {
+  content: "";
+  position: absolute;
+}
+.art61 div::before {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #1a4341;
+  top: 300px;
+  left: 100px;
+  box-shadow: 0 0 0 25px #f3ac3c;
+}
+.art61 div::after {
+  width: 100%;
+  height: 100%;
+  background: #998235;
+  border-radius: 50%;
+  top: 400px;
+}
+/* ---------------------- */
+/* art 62 */
+/* ---------------------- */
+.art62 {
+  background: linear-gradient(#d25b70 150px, #6cb3a9 150px);
+}
+.art62 div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    #f6df96 100px,
+    transparent 100px 115px,
+    #f6df96 115px 125px,
+    transparent 125px 140px,
+    #f6df96 140px 150px,
+    transparent 150px 165px,
+    #f6df96 165px 175px,
+    transparent 175px 190px,
+    #f6df96 190px 200px
+  );
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px;
+}
+/* ---------------------- */
+/* art 63 */
+/* ---------------------- */
+.art63 {
+  background: linear-gradient(
+    #6592cf 130px,
+    #243d83 130px 170px,
+    #6592cf 170px 300px
+  );
+}
+.art63 div {
+  width: 200px;
+  height: 200px;
+  background: #243d83;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px;
+  box-shadow: 225px 0 0 0 #243d83, -225px 0 0 0 #243d83;
+}
+.art63 div::before,
+.art63 div::after {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 40px;
+  background: #6592cf;
+}
+.art63 div::before {
+  top: 50px;
+  left: -27px;
+  border-radius: 0 0 50px 50px;
+  box-shadow: 225px 0 0 0 #6592cf;
+}
+.art63 div::after {
+  top: 110px;
+  left: -27px;
+  border-radius: 50px 50px 0 0;
+  box-shadow: 225px 0 0 0 #6592cf;
+}
+/* ---------------------- */
+/* art 64 */
+/* ---------------------- */
+.art64 {
+  background: #4f77ff;
+}
+.art64 div {
+  width: 200px;
+  height: 200px;
+  background: #191919;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+.art64 div::before,
+.art64 div::after {
+  content: "";
+  position: absolute;
+}
+.art64 div::before {
+  width: 100px;
+  height: 16px;
+  background: #f9e492;
+  top: 122px;
+  left: 0;
+  box-shadow: 0 26px 0 0 #f9e492, 0 52px 0 0 #f9e492, 120px -13px 0 0 #f9e492,
+    120px 13px 0 0 #f9e492, 120px 39px 0 0 #f9e492;
+}
+.art64 div::after {
+  width: 20px;
+  height: 16px;
+  background: #d6b73f;
+  top: 116px;
+  left: 100px;
+  transform: skewY(-33deg);
+  box-shadow: 0 26px 0 0 #d6b73f, 0 52px 0 0 #d6b73f;
+}
+.art64 p {
+  width: 40px;
+  height: 40px;
+  background: #f9e492;
+  border-radius: 50%;
+  position: relative;
+  top: -126px;
+  left: 140px;
+}
+/* ---------------------- */
+/* art 65 */
+/* ---------------------- */
+.art65 {
+  background: #0e2e2c;
+}
+.art65 div {
+  width: 200px;
+  height: 200px;
+  background: #dd6b4d;
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 6px #f3ac3c, inset 0 0 0 20px #0e2e2c,
+    inset 0 0 0 28px #f3ac3c, inset 0 0 0 40px #0e2e2c, inset 0 0 0 50px #998235,
+    inset 0 0 0 60px #0e2e2c, inset 0 0 0 72px #f3ac3c, inset 0 0 0 80px #0e2e2c,
+    inset 0 0 0 100px #f3ac3c;
+}
+/* ---------------------- */
+/* art 66 */
+/* ---------------------- */
+.art66 {
+  background: #6cb3a9;
+}
+.art66 div {
+  width: 200px;
+  height: 200px;
+  background: linear-gradient(
+    #d25b70 90px,
+    #781728 90px 110px,
+    #ffffff 110px 200px
+  );
+  position: relative;
+  top: 50px;
+  left: 100px;
+  border-radius: 100px;
+}
+.art66 div::before,
+.art66 div::after {
+  content: "";
+  position: absolute;
+}
+.art66 div::before {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f6df96;
+  top: 75px;
+  left: 75px;
+  box-shadow: 0 0 0 10px #781728;
+}
+.art66 div::after {
+  width: 20px;
+  height: 20px;
+  background: #6cb3a9;
+  top: 90px;
+  left: -10px;
+  box-shadow: 200px 0 0 0 #6cb3a9;
+}
+
+/* ---------------------- */
+/* art 67 */
+/* ---------------------- */
+.art67 {
+  background: radial-gradient(circle, #6592cf 100px, #243d83 100px);
+}
+.art67 div {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  top: 140px;
+  left: 115px;
+  border-radius: 50%;
+  border: 20px solid #243d83;
+}
+.art67 div::before,
+.art67 div::after {
+  content: "";
+  position: absolute;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 20px solid #243d83;
+}
+.art67 div::before {
+  top: -95px;
+  left: 55px;
+}
+.art67 div::after {
+  top: -95px;
+  left: -95px;
+}
+.art67 p {
+  width: 170px;
+  height: 170px;
+  position: relative;
+  top: -180px;
+  left: 115px;
+  border-radius: 50%;
+  border: 20px solid #243d83;
+}
+/* ---------------------- */
+/* art 68 */
+/* ---------------------- */
+.art68 {
+  background: #ac474b;
+}
+.art68 div {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  position: relative;
+  top: 95px;
+  left: 170px;
+  border-radius: 50%;
+  box-shadow: 0 70px 0 20px #ffffff;
+}
+.art68 div::before,
+.art68 div::after {
+  content: "";
+  position: absolute;
+}
+.art68 div::before {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0e1f2b;
+  top: 18px;
+  left: 15px;
+  box-shadow: 20px 0 0 0 #0e1f2b;
+}
+.art68 div::after {
+  width: 60px;
+  height: 10px;
+  border-radius: 10px;
+  background: #ffa63f;
+  top: 44px;
+  left: -4px;
+  border: 4px solid #ac474b;
+}
+.art68 p {
+  width: 60px;
+  height: 5px;
+  position: relative;
+  background: #0e1f2b;
+  top: 39px;
+  left: 170px;
+}
+.art68 p::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(#0e1f2b 15px, #ffffff 15px 25px, #0e1f2b 25px);
+  top: -40px;
+  left: 10px;
+}
+/* ---------------------- */
+/* art 69 */
+/* ---------------------- */
+.art69 {
+  background: #14313e;
+}
+.art69 div {
+  width: 80px;
+  height: 102px;
+  background: #ba3e46;
+  position: relative;
+  top: 125px;
+  left: 160px;
+}
+.art69 div::before,
+.art69 div::after {
+  content: "";
+  position: absolute;
+}
+.art69 div::before {
+  width: 80px;
+  height: 30px;
+  background: #f3695a;
+  top: -15px;
+  left: 0px;
+  border-radius: 50%;
+  box-shadow: 0 100px 0 0 #ba3e46;
+}
+.art69 div::after {
+  width: 65px;
+  height: 40px;
+  background: #14313e;
+  top: -35px;
+  left: 7px;
+  border-radius: 50%;
+}
+.art69 p {
+  width: 30px;
+  height: 50px;
+  background: #f3ac3c;
+  position: relative;
+  top: -37px;
+  left: 200px;
+  border-radius: 50px 0;
+}
+/* ---------------------- */
+/* art 70 */
+/* ---------------------- */
+.art70 {
+  background: #ac474b;
+}
+.art70 div {
+  width: 60px;
+  height: 60px;
+  background: #ffffff;
+  position: relative;
+  top: 110px;
+  left: 130px;
+  box-shadow: 80px 0 0 0 #ffffff, 0 80px 0 0 #ffffff, 80px 80px 0 0 #ffffff;
+}
+.art70 div::before,
+.art70 div::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: #ac474b;
+  box-shadow: inset 0 0 0 10px #ffffff;
+  top: -60px;
+}
+.art70 div::before {
+  left: 35px;
+  border-radius: 50px 50px 0 50px;
+}
+.art70 div::after {
+  left: 65px;
+  border-radius: 50px 50px 50px 0;
+}

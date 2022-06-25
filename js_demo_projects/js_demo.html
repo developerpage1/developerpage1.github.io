@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript projects</title>
+    <link rel="stylesheet" href="mystyle.css" />
+    <script src="myscript.js" defer></script>
+  </head>
+  <body>
+    <div class="frame">
+      <section class="page one">
+        <h1>JavaScript projects demo</h1>
+      </section>
+      <section class="page two">
+        <h1>JS Stopwatch</h1>
+        <p><span id="sec">00</span>:<span id="milisec">00</span></p>
+        <div class="stopwatch">
+          <button id="btnStart">Start</button>
+          <button id="btnStop">Stop</button>
+          <button id="btnReset">Reset</button>
+        </div>
+      </section>
+      <section class="page three">
+        <h1>JS clock</h1>
+        <p id="clock"></p>
+      </section>
+      <section class="page four">
+        <h1>JS Simple Calculator</h1>
+        <table>
+          <tr>
+            <td colspan="4" style="height: 80px">
+              <div id="txtcalculator"></div>
+            </td>
+          </tr>
+          <tr class="operators">
+            <td><button data-operator="+">+</button></td>
+            <td><button data-operator="-">-</button></td>
+            <td><button data-operator="*">&times;</button></td>
+            <td><button data-operator="/">&divide;</button></td>
+          </tr>
+          <tr>
+            <td><button data-num="7">7</button></td>
+            <td><button data-num="8">8</button></td>
+            <td><button data-num="9">9</button></td>
+
+            <td rowspan="4">
+              <button data-operator="=" id="btnequal">=</button>
+            </td>
+          </tr>
+          <tr>
+            <td><button data-num="4">4</button></td>
+            <td><button data-num="5">5</button></td>
+            <td><button data-num="6">6</button></td>
+          </tr>
+          <tr>
+            <td><button data-num="1">1</button></td>
+            <td><button data-num="2">2</button></td>
+            <td><button data-num="3">3</button></td>
+          </tr>
+          <tr>
+            <td><button data-num="0">0</button></td>
+            <td><button data-num=".">.</button></td>
+            <td><button data-operator="C" id="clearTxt">C</button></td>
+          </tr>
+        </table>
+      </section>
+      <section class="page five" id="randomGradient">
+        <h1>click the button and generate random gradient color</h1>
+        <button id="btnRandomGradient">click me</button>
+        <p id="randomGradientTxt"></p>
+      </section>
+      <section class="page six">
+        <div class="tasks">
+          <h2>My TODO list</h2>
+          <input type="text" name="task" id="myTask" />
+          <button id="btnAddTask">add</button>
+        </div>
+        <ul id="myUl"></ul>
+      </section>
+      <section class="page seven">
+        <h1>js analog clock</h1>
+        <div class="clock-frame">
+          <span>1</span>
+          <span>2</span>
+          <span>3</span>
+          <span>4</span>
+          <span>5</span>
+          <span>6</span>
+          <span>7</span>
+          <span>8</span>
+          <span>9</span>
+          <span>10</span>
+          <span>11</span>
+          <span>12</span>
+          <div class="clock-h"></div>
+          <div class="clock-min"></div>
+          <div class="clock-sec"></div>
+        </div>
+      </section>
+      <section class="page eight">
+        <div>
+          <canvas id="mycanvas"></canvas>
+        </div>
+      </section>
+      <section class="page nine">
+        <h1>under construction...</h1>
+      </section>
+    </div>
+  </body>
+</html>

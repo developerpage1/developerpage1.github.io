@@ -349,5 +349,48 @@ ul li.checked::before {
 /* ---------------------------------------------*/
 
 /* -------------------------------------------- */
-/* page 9 - under construction
+/* page 9 - modal
 /* ---------------------------------------------*/
+.nine {
+  background: linear-gradient(79deg, #5f48a3, #26d460);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.nine #btnmodal {
+  padding: 5px 10px;
+  font-size: 1.5rem;
+  background-color: sandybrown;
+  border: 1px solid black;
+  border-radius: 10px;
+  cursor: pointer;
+  position: relative;
+  margin-bottom: 50px;
+  top: 30%;
+}
+.nine .modal {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background: rgba(0 0 0 / 0.5);
+  left: 0;
+  top: 0;
+}
+.nine .modal-content {
+  border: 1px solid black;
+  width: 50%;
+  height: 70%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(2, 138, 192);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

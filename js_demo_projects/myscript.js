@@ -485,3 +485,22 @@ window.addEventListener('resize', () => {
     // redraw all balls on browser resize
     init();
 })
+
+// -------------------------------------------
+// page 9 modal
+// -------------------------------------------
+// 
+const btnModal = document.getElementById('btnmodal');
+const modal = document.getElementsByClassName('modal')[0];
+
+// when u click button, show modal
+btnModal.onclick = function () {
+    modal.style.display = "block";
+}
+
+// when u click outside modal-content, close modal
+window.onclick = function (e) {
+    if (e.target == modal) {
+        modal.style.display = "none";
+    }
+}

@@ -520,32 +520,189 @@ search.onkeyup = function (e) {
     // input word
     const word = e.target.value;
 
-    // get list of matches from json file
-    fetch('../json/country.json')
-        .then(res => res.json())
-        .then(data => {
-            // get matches based on input word
-            const matches = data.filter(state => state.toLocaleLowerCase().startsWith(word.toLocaleLowerCase()));
-            if (word.length > 0) {   
-                if (matches.length > 0) {
-                    // render results
-                    renderMatches(matches)
-                }
-            } else {
-                searchList.innerHTML = '';
-            } 
-        })
-    console.log(e.target.value)
+    if (word.length > 0) {  
+        // get list of matches from json file
+        fetch('../json/country.json')
+            .then(res => res.json())
+            .then(data => {
+                // get matches based on input word
+                const matches = data.filter(state => state.toLocaleLowerCase().startsWith(word.toLocaleLowerCase()));
+                    if (matches.length > 0) {
+                        // render results
+                        renderMatches(matches)
+                    }           
+            })
+    } else {
+        searchList.innerHTML = '';
+    }
 }
-
+// render matches in UL
 const renderMatches = (match) => {
     const html = match.map(state =>
         `<li onclick="selectedMatch(this)">${state}</li>`
     ).join('');
     searchList.innerHTML = html;
 }
+// pick country from the list
 function selectedMatch(el) {
     search.value = el.textContent; 
+    searchList.innerHTML = '';
+
 }
 
 
+//--------------------------------
+// page 11 - datepicker
+//--------------------------------
+
+// date picker demo
+
+const picker = document.getElementsByClassName('date-input')[0];
+const calendar = document.getElementsByClassName('calendar')[0];
+const frame = document.getElementsByClassName('frame')[0];
+const monthYear = document.getElementsByClassName('month-year')[0];
+const week = document.getElementsByClassName('week')[0];
+const monthDays = document.getElementsByClassName('days')[0];
+
+// prev and next buttons for month picker
+const btnPickMonth = document.getElementsByClassName('btnPickMonth');
+const buttonsPickMonth = Array.from(btnPickMonth);
+
+
+let currentMonthNum;
+let currentYearNum;
+const monthCount = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+const dayCount = [1, 2, 3, 4, 5, 6, 7];
+
+// ------------------------
+// model
+// ------------------------
+
+function initCalendar() {
+    // get data for display month and year
+    const d = new Date()
+    picker.innerHTML = d.getDate() + '-'
+        + (d.getMonth() + 1) + '-'
+        + d.getFullYear();
+    currentMonthNum = d.getMonth();
+    currentYearNum = d.getFullYear();
+    monthYear.innerHTML = d.toLocaleString('default', { month: 'long' }).toUpperCase() + ', ' + d.toLocaleString('default', { year: 'numeric' });
+
+    // names for days
+    populateWeek();
+    renderMonthDaysGrid();
+}
+
+// names for days in the week
+function populateWeek() {
+    // set to show named days from 0-6(sat-sun)
+    const a = new Date(2022, 7, 21);
+    let dayNames = []
+    let txt = '';
+    for (let i = 0; i < 7; i++){
+        dayNames.push(a.toLocaleString('default', { weekday: 'short' }).toUpperCase());
+        a.setDate(a.getDate() + 1);
+     
+    }
+       txt = dayNames.map(day => `<div>${day.substring(0, 3)}</div>`).join('');
+        // console.log(txt);
+    week.innerHTML = txt;
+}
+
+// leap year
+function isThisLeapYear(year) {
+    return year % 100 === 0 ? year % 400 === 0 : year % 4 === 0;
+}
+
+// btn logic for prev and next month
+function btnMonthLogic(num) {
+    if (num) {
+        // if prev month
+        currentMonthNum--;
+        if (currentMonthNum < 0) {
+            currentMonthNum = 11;
+            currentYearNum--;
+        }
+    } else {
+        // if next month
+        currentMonthNum++;
+        if (currentMonthNum == 12) {
+            currentMonthNum = 0;
+            currentYearNum++;
+        }
+    }
+    renderMonthYear(currentMonthNum, currentYearNum);
+    renderMonthDaysGrid();
+}
+
+// initial setup
+initCalendar();
+
+// --------------------------
+// view
+// --------------------------
+
+// render month and year
+function renderMonthYear(month, year) {
+    const pickNewDate = new Date(year, month);
+    monthYear.innerHTML = pickNewDate.toLocaleString('default', { month: 'long' }).toUpperCase() + ', ' + pickNewDate.toLocaleString('default', { year: 'numeric' });
+}
+
+// when u click on day, show date in date-input
+function pickDate(year, month, day) {
+    picker.innerHTML = `${day}-${month + 1}-${year}`;
+    currentMonthNum = month;
+    currentYearNum = year;
+    renderMonthYear(month, year);
+}
+
+// render days of the month in right position in grid
+function renderMonthDaysGrid() {
+
+    let daysInMonth = 0; 
+    let leapYear = 0;
+    // if month = 1, check for leap year (29 days)
+    if (currentMonthNum === 1) {
+        leapYear = isThisLeapYear(currentYearNum) ? 1 : 0;
+    }
+
+    daysInMonth = monthCount[currentMonthNum] + leapYear;
+    const firstDayOfTheMonth = new Date(currentYearNum, currentMonthNum, 1).getDay();
+    const prevMonthDays = firstDayOfTheMonth ;
+    const totalDays = daysInMonth + prevMonthDays ;
+   
+    // display days grid
+    let txt = '';
+    monthDays.innerHTML = '';
+    for (let i = 0; i < totalDays; i++) {
+        
+        if (i >= prevMonthDays) {
+            txt = `<div onclick="pickDate(${currentYearNum}, ${currentMonthNum},${i + 1 - prevMonthDays})">${i + 1 - prevMonthDays}</div>`;
+            monthDays.innerHTML += txt; 
+        } else {
+            txt = `<div></div>`;
+            monthDays.innerHTML += txt; 
+        }
+    }
+}
+
+// ------------------------------------------
+// controller
+// ------------------------------------------
+
+buttonsPickMonth.forEach(btn => {
+    btn.addEventListener('click', function(){
+        const prev = (this.classList.contains('prev')) ? 1 : 0;
+        btnMonthLogic(prev);
+    })
+})
+
+// toggle calendar when you click on picker
+picker.onclick = function () {
+    calendar.classList.toggle('active');
+}
+document.addEventListener('click', function(e) {
+    if (e.target == frame) {
+        calendar.classList.remove('active')
+    }
+})

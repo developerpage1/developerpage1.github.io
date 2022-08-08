@@ -1,8 +1,8 @@
 :root {
   --bg-color: red;
-  --bg-colorTodo: #3976cc;
+  --bg-colorTodo: #1b78fa;
   --bg-colorTodoEven: #95bdf5;
-  --bg-colorTodoHover: #1f7cfd;
+  --bg-colorTodoHover: #4991f5;
 }
 
 * {
@@ -147,8 +147,7 @@ h1 {
 /* page 6 - todo list */
 /* ---------------------------------------------*/
 .six {
-  background-color: #a6c6f3;
-  overflow-y: scroll;
+  background-image: linear-gradient(156deg, #dae6d2, #1788f1);
   position: relative;
 }
 .tasks {
@@ -182,15 +181,17 @@ h1 {
   display: table;
   clear: both;
 }
-ul {
+.six ul {
   position: absolute;
   left: 2rem;
   top: 8rem;
   width: calc(100% - 4rem);
   /* margin-left: 2rem; */
   list-style: none;
+  overflow-y: auto;
+  max-height: 500px;
 }
-ul li {
+.six ul li {
   width: 100%;
   padding: 1rem;
   padding-left: 4rem;
@@ -198,19 +199,19 @@ ul li {
   position: relative;
 }
 
-ul li:nth-child(even) {
+.six ul li:nth-child(even) {
   background-color: var(--bg-colorTodoEven);
 }
-ul li:hover {
+.six ul li:hover {
   background-color: var(--bg-colorTodoHover);
 }
-ul li.checked {
+.six ul li.checked {
   text-decoration: line-through;
   background-color: var(--bg-colorTodoHover);
   color: white;
   position: relative;
 }
-ul li.checked::before {
+.six ul li.checked::before {
   content: "";
   position: absolute;
   top: 1rem;
@@ -223,7 +224,7 @@ ul li.checked::before {
   transform: rotate(-45deg);
 }
 
-.close {
+.six #myUl .close {
   position: absolute;
   top: 0;
   right: 0;
@@ -231,7 +232,7 @@ ul li.checked::before {
   font-size: 2rem;
   cursor: pointer;
 }
-.close:hover {
+.six #myUl .close:hover {
   background-color: var(--bg-colorTodo);
 }
 
@@ -393,4 +394,43 @@ ul li.checked::before {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+/* ----------------------------------- */
+/* page 10 - typeahead autocomplete    */
+/* ----------------------------------- */
+.ten {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: linear-gradient(80deg, #fd854d, #87acff);
+}
+.ten h1 {
+  position: absolute;
+  top: 3rem;
+}
+.ten .autocomplete {
+  width: 70%;
+  position: absolute;
+  top: 10rem;
+}
+.ten .autocomplete input {
+  width: 100%;
+  font-size: 1.5rem;
+  padding: 10px;
+  border: none;
+  box-shadow: 0 0 3px 0;
+}
+.ten .autocomplete .searchList {
+  width: 100%;
+  list-style: none;
+  max-height: 250px;
+  overflow-y: auto;
+}
+.ten .autocomplete .searchList li {
+  font-size: 1.2rem;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.ten .autocomplete ul li:hover {
+  background-color: rgba(0, 0, 0, 0.2);
 }

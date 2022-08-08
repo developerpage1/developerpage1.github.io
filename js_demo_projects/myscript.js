@@ -258,8 +258,12 @@ btnRandomGradient.onclick = () => {
 const myUl = document.getElementById('myUl');
 let myTask = document.getElementById('myTask');
 const btnAddTask = document.getElementById('btnAddTask');
-const myList = document.getElementsByTagName('li');
+// const myList = document.getElementsByTagName('li');
+const myList = myUl.getElementsByTagName('li');
 const deleteTask = document.getElementsByClassName('close');
+
+
+
 
 // model section ------------------------
 
@@ -283,11 +287,11 @@ function saveTodoJSON() {
 
 function btnClose(newTask) {
     // add close button (X on the right side of the list)
-    const btnClose = document.createElement('span');
-    btnClose.className = 'close';
+    const btnX = document.createElement('span');
+    btnX.className = 'close';
     const txtClose = document.createTextNode('\u00d7');
-    btnClose.appendChild(txtClose);
-    newTask.appendChild(btnClose);
+    btnX.appendChild(txtClose);
+    newTask.appendChild(btnX);
 }
 
 // view section ------------
@@ -504,3 +508,44 @@ window.onclick = function (e) {
         modal.style.display = "none";
     }
 }
+
+//---------------------------------------------
+// page 10 typeahead
+//---------------------------------------------
+
+const search = document.getElementById('search')
+const searchList = document.getElementsByClassName('searchList')[0];
+
+search.onkeyup = function (e) {
+    // input word
+    const word = e.target.value;
+
+    // get list of matches from json file
+    fetch('../json/country.json')
+        .then(res => res.json())
+        .then(data => {
+            // get matches based on input word
+            const matches = data.filter(state => state.toLocaleLowerCase().startsWith(word.toLocaleLowerCase()));
+            if (word.length > 0) {   
+                if (matches.length > 0) {
+                    // render results
+                    renderMatches(matches)
+                }
+            } else {
+                searchList.innerHTML = '';
+            } 
+        })
+    console.log(e.target.value)
+}
+
+const renderMatches = (match) => {
+    const html = match.map(state =>
+        `<li onclick="selectedMatch(this)">${state}</li>`
+    ).join('');
+    searchList.innerHTML = html;
+}
+function selectedMatch(el) {
+    search.value = el.textContent; 
+}
+
+

@@ -103,11 +103,9 @@ nav ul li a:hover::after {
   .burger {
     display: block;
   }
-
   nav {
     display: none;
   }
-
   .show {
     display: flex;
     flex-direction: column;
@@ -135,102 +133,6 @@ nav ul li a:hover::after {
     text-align: center;
     padding: 30px;
     font-size: 1.6em;
-  }
-}
-.sparkles {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.curtain {
-  width: 100%;
-  background-image: linear-gradient(to bottom, salmon 50%, wheat 50%);
-}
-
-.curtain::after {
-  content: "";
-  display: block;
-  min-height: 98vh;
-}
-
-.curtain2 {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 20px;
-  mix-blend-mode: difference;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 98vh;
-}
-.curtain2 h2 {
-  color: wheat;
-  font-size: 2em;
-  text-transform: uppercase;
-}
-
-.sparkles {
-  position: relative;
-}
-
-.sparkles i {
-  position: absolute;
-  background-color: rgba(255, 255, 255, 0.1);
-  top: 0px;
-  border-radius: 50%;
-  -webkit-animation: animeSparkle 10s linear infinite;
-          animation: animeSparkle 10s linear infinite;
-}
-
-@-webkit-keyframes animeSparkle {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  40% {
-    transform: translateY(20vh);
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(50vh);
-    background-color: rgb(255, 255, 255);
-    opacity: 1;
-  }
-  60% {
-    transform: translateY(60vh);
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(150vh);
-    opacity: 0;
-  }
-}
-
-@keyframes animeSparkle {
-  0% {
-    transform: translateY(0);
-    opacity: 0;
-  }
-  40% {
-    transform: translateY(20vh);
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-  50% {
-    transform: translateY(50vh);
-    background-color: rgb(255, 255, 255);
-    opacity: 1;
-  }
-  60% {
-    transform: translateY(60vh);
-    background-color: rgba(255, 255, 255, 0.5);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(150vh);
-    opacity: 0;
   }
 }
 .clip-circles {
@@ -304,7 +206,6 @@ nav ul li a:hover::after {
   .clip-circles h3 {
     font-size: 1.5em;
   }
-
   .circle {
     flex-direction: column;
   }
@@ -749,7 +650,6 @@ nav ul li a:hover::after {
     margin: 0.5em 1em 1em 1em;
   }
   .card-box3 div .typing {
-    width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
     height: 10rem;
@@ -757,16 +657,13 @@ nav ul li a:hover::after {
   .card-box3 div .typing p {
     font-size: 1.2rem;
   }
-
   .cards > p {
     font-size: 1.3em;
   }
-
   .cardframe {
     justify-content: space-between;
     gap: 5px;
   }
-
   .clipbtn {
     bottom: -4rem;
     left: 2rem;
@@ -863,8 +760,7 @@ nav ul li a:hover::after {
   border-radius: 50%;
   border-right: 1px solid white;
   background-color: rgba(221, 199, 158, 0.3);
-  -webkit-animation: moveit 5s linear infinite;
-          animation: moveit 5s linear infinite;
+  animation: moveit 5s linear infinite;
 }
 .form span:nth-of-type(2) {
   bottom: 10em;
@@ -873,8 +769,7 @@ nav ul li a:hover::after {
   border-radius: 10px;
   border-top: 1px solid white;
   border-left: 1px solid white;
-  -webkit-animation: moveit2 5s linear infinite;
-          animation: moveit2 5s linear infinite;
+  animation: moveit2 5s linear infinite;
 }
 .form span:nth-of-type(3) {
   bottom: 33em;
@@ -883,8 +778,7 @@ nav ul li a:hover::after {
   border-radius: 10px;
   border-top: 1px solid white;
   border-left: 1px solid white;
-  -webkit-animation: moveit3 10s linear infinite;
-          animation: moveit3 10s linear infinite;
+  animation: moveit3 10s linear infinite;
   z-index: 5;
 }
 .form span:nth-of-type(4) {
@@ -894,20 +788,7 @@ nav ul li a:hover::after {
   border-radius: 10px;
   border-top: 1px solid white;
   border-left: 1px solid white;
-  -webkit-animation: moveit4 15s linear infinite;
-          animation: moveit4 15s linear infinite;
-}
-
-@-webkit-keyframes moveit {
-  0% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-50px);
-  }
-  100% {
-    transform: translateY(0px);
-  }
+  animation: moveit4 15s linear infinite;
 }
 
 @keyframes moveit {
@@ -921,17 +802,6 @@ nav ul li a:hover::after {
     transform: translateY(0px);
   }
 }
-@-webkit-keyframes moveit2 {
-  0% {
-    transform: translateY(0px) scaleX(1);
-  }
-  50% {
-    transform: translateY(50px) scaleX(1.5);
-  }
-  100% {
-    transform: translateY(0px) scaleX(1);
-  }
-}
 @keyframes moveit2 {
   0% {
     transform: translateY(0px) scaleX(1);
@@ -943,17 +813,6 @@ nav ul li a:hover::after {
     transform: translateY(0px) scaleX(1);
   }
 }
-@-webkit-keyframes moveit3 {
-  0% {
-    transform: translateX(0px) rotate(10deg) scale(0.5);
-  }
-  50% {
-    transform: translateX(-150px) rotate(-360deg) scale(0.5);
-  }
-  100% {
-    transform: translateX(0px) rotate(10deg) scale(0.5);
-  }
-}
 @keyframes moveit3 {
   0% {
     transform: translateX(0px) rotate(10deg) scale(0.5);
@@ -963,17 +822,6 @@ nav ul li a:hover::after {
   }
   100% {
     transform: translateX(0px) rotate(10deg) scale(0.5);
-  }
-}
-@-webkit-keyframes moveit4 {
-  0% {
-    transform: rotate(10deg) scale(1);
-  }
-  50% {
-    transform: rotate(-360deg) scale(0.5);
-  }
-  100% {
-    transform: rotate(10deg) scale(1);
   }
 }
 @keyframes moveit4 {
@@ -997,8 +845,7 @@ nav ul li a:hover::after {
   bottom: 0;
   border-radius: 50%;
   border: 1px solid rgba(49, 95, 194, 0.9);
-  -webkit-animation: bubbs 6s linear infinite;
-          animation: bubbs 6s linear infinite;
+  animation: bubbs 6s linear infinite;
 }
 #bubbles span::before {
   content: "";
@@ -1008,15 +855,6 @@ nav ul li a:hover::after {
   border-radius: 50%;
   background: radial-gradient(white, transparent);
   transform: scale(0.3) translate(-70%, -70%);
-}
-
-@-webkit-keyframes bubbs {
-  0% {
-    transform: scale(0) translateY(0) rotate(10deg);
-  }
-  100% {
-    transform: scale(1.3) translateY(-40vh) rotate(360deg);
-  }
 }
 
 @keyframes bubbs {
@@ -1029,7 +867,6 @@ nav ul li a:hover::after {
 }
 .foot {
   width: 100%;
-  height: 20vh;
   overflow-x: hidden;
 }
 .foot ul {

@@ -1,3 +1,8 @@
+:root {
+  --c_light: #ffb26b;
+  --c_dark: #ff7b54;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -19,6 +24,11 @@ h2 {
   text-align: left;
   margin-left: 5rem;
   padding: 1.5rem;
+}
+
+hr {
+  width: 80%;
+  margin-left: 10%;
 }
 
 .gallery {
@@ -4022,7 +4032,8 @@ h2 {
 }
 
 /* svg art -------------------------------------- */
-.svg_art {
+.svg_art,
+.svg_animation {
   width: 80%;
   margin-left: 10%;
   display: flex;
@@ -4038,7 +4049,192 @@ h2 {
   height: 200px;
 }
 
-footer {
+/* art9 - chameleon */
+.art9:hover .c_light {
+  transition: 1s ease;
+
+  /* fill: #FFB26B; */
+  fill: var(--c_light);
+}
+
+.art9:hover .c_dark {
+  transition: 1s ease;
+  fill: var(--c_dark);
+  stroke: var(--c_dark);
+}
+
+/* ------------------- svg animation ------------------*/
+
+/* anime 1 */
+svg .obj_moon {
+  animation: 5s goRound infinite linear;
+  transform-origin: center;
+  /* transform-box: fill-box; */
+}
+
+@keyframes goRound {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+svg .w_wheel {
+  animation: 5s millWheel infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+@keyframes millWheel {
+  from {
+    transform: rotateZ(0deg);
+  }
+
+  to {
+    transform: rotateZ(-1turn);
+  }
+}
+
+/* -------------------anime 3 */
+.anime3 svg path {
+  stroke-dasharray: 348;
+  stroke-dashoffset: 348;
+  opacity: 0;
+  animation: harasser 10s infinite alternate;
+}
+
+@keyframes harasser {
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* anime4 */
+
+.anime4 {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+.anime4 svg {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 200px;
+}
+
+#atom1,
+#atom2,
+#atom3 {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  offset-distance: 0%;
+  animation: atoms linear 2s infinite;
+}
+
+#atom1 {
+  background-color: #f00;
+
+  offset-path: path("M40 100 A60 20 0 0,0 160 100 A60 20 0 0,0 40 100");
+}
+
+#atom2 {
+  background-color: #0f0;
+  offset-path: path("M58 58 A20 10 45 0,0 142 142 A20 10 45 0,0 58 58");
+}
+
+#atom3 {
+  background-color: #00f;
+  offset-path: path("M142 58 A20 10 -45 0,0 58 142 A20 10 -45 0,0 142 58");
+}
+
+@keyframes atoms {
+  from {
+    offset-distance: 0%;
+  }
+
+  to {
+    offset-distance: 100%;
+  }
+}
+
+/* anime5 */
+#banana {
+  stroke-dasharray: 633;
+  stroke-dashoffset: 633;
+  animation: banana 5s alternate infinite ease-in-out;
+}
+
+@keyframes banana {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+/* anime 6 */
+.anime6 #plant_1 path {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: 5s plant_1 infinite alternate;
+}
+
+@keyframes plant_1 {
+  0% {
+    stroke-dashoffset: 1;
+    fill: rgba(118, 195, 101, 0);
+  }
+
+  50% {
+    stroke-dashoffset: 0;
+    fill: rgba(118, 195, 101, 0);
+  }
+
+  100% {
+    stroke-dashoffset: 0;
+    fill: rgba(118, 195, 101, 1);
+  }
+}
+
+/* anime 7 */
+#heart_pulse {
+  stroke-dasharray: 2 8;
+  stroke-dashoffset: 10;
+  animation: 1s heart_pulse infinite linear;
+}
+
+@keyframes heart_pulse {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+#heart_beat {
+  opacity: 0.8;
+  transform-origin: center;
+  animation: 1s heart_beat infinite ease-in;
+}
+
+@keyframes heart_beat {
+  from {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+
+/* space at the end of the document */
+.art_end {
   height: 300px;
   width: 100%;
 }
